@@ -75,5 +75,12 @@
     "title": "Publications",
     "section": "In Review",
     "text": "In Review"
+  },
+  {
+    "objectID": "index.html#selected-research",
+    "href": "index.html#selected-research",
+    "title": "Lachlan Astfalck",
+    "section": "Selected Research",
+    "text": "Selected Research\nLC Astfalck, AM Sykulski, & EJ Cripps. (2024). ‘’Debiasing Welch’s Method for Spectral Density Estimation’’, Biometrika, asae033. [Available here.]\nLC Astfalck, DB Williamson, N Gandy, LJ Gregoire, & RF Ivanovic. (2024). ‘’Coexchangeable Process Modeling for Uncertainty Quantification in Joint Climate Reconstruction’’. Journal of the American Statistical Association, 1-14. [Available here.]\nLC Astfalck, CR Bird, & Williamson, DB. (2024). ‘’Generalised Bayes Linear Inference’’. Submitted to The Journal of the Royal Statistical Society: Series B (discussions). [Available here.]"
   }
 ]

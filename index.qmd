@@ -29,7 +29,7 @@ Previously, I was a Research Fellow in the School of Earth and Environment at th
 
 I have also worked in ecological restoration, materials engineering, prognostics and health management, and have consulted for the Australian Wildlife Conservancy.
 
-## Selected Papers
+## Selected Research
 
 LC Astfalck, AM Sykulski, & EJ Cripps. (2024). *''Debiasing Welch’s Method for Spectral Density Estimation''*, **Biometrika**, asae033. [[Available here.]](https://academic.oup.com/biomet/advance-article/doi/10.1093/biomet/asae033/7703280)
 

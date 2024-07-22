@@ -14,9 +14,9 @@ about:
     - icon: mortarboard
       text: Scholar
       href: https://scholar.google.com/citations?user=duQ38MgAAAAJ&hl=en&oi=ao
-    # - icon: briefcase-fill
-    #   text: CV
-    #   href: astfalck_cv.pdf
+    - icon: briefcase-fill
+      text: CV
+      href: astfalck_cv.pdf
 ---
 
 ## About

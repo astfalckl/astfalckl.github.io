@@ -1,0 +1,62 @@
+---
+title: "Publications"
+---
+
+---
+
+### In Review
+
+**LC Astfalck**, CR Bird, & Williamson, DB. (2024). *''Generalised Bayes Linear Inference''*. Submitted to **The Journal of the Royal Statistical Society: Series B (discussions)**. [[Available here.]](https://arxiv.org/pdf/2405.14145)
+
+ALS Ponte, **LC Astfalck**, MD Rayson, AP Zulberti, & NL Jones. (2024). *''Inferring flow energy, space and time scales: freely-drifting vs fixed point observations''*. Accepted with revisions in **Nonlinear Processes in Geophysics**. [[Available here.]](https://npg.copernicus.org/preprints/npg-2024-10/)
+
+### 2024
+
+**LC Astfalck**, AM Sykulski, & EJ Cripps. (2024). *''Debiasing Welch’s Method for Spectral Density Estimation''*, **Biometrika**, asae033. [[Available here.]](https://academic.oup.com/biomet/advance-article/doi/10.1093/biomet/asae033/7703280)
+
+**LC Astfalck**, DB Williamson, N Gandy, LJ Gregoire, & RF Ivanovic. (2024). *''Coexchangeable Process Modeling for Uncertainty Quantification in Joint Climate Reconstruction''*. **Journal of the American Statistical Association**, 1-14. [[Available here.]](https://www.tandfonline.com/doi/full/10.1080/01621459.2024.2325705)
+
+IA Milne, & **LC Astfalck**. (2024). *''Heave response spectra for a semisubmersible in long period swell''*. **24th Australasian Fluid Mechanics Conference**.
+
+N Gandy, **LC Astfalck**, GL Ives, & GE Rivers. (2024). *''Ice sheet speed-dating: using expert judgement to identify 'good' simulations of the LGM North American ice sheets''*.
+**Quaternary Science Reviews**, 333:108690. [[Available here.]](https://www.sciencedirect.com/science/article/pii/S0277379124001914?dgcid=rss_sd_all)
+
+VL Patterson, LJ Gregoire, RF Ivanovic, N Gandy, J Owen, RS Smith, PJ Valdes, OG Pollard & **LC Astfalck**. (2024). *''Contrasting the Penultimate and Last Glacial Maxima (21 and 140 ka BP) using coupled climate-ice sheet modelling''*'. Accepted in **Climate of the Past**. [[Available here.]](https://cp.copernicus.org/preprints/cp-2024-10/)
+
+### 2023
+
+**LC Astfalck**, M Bertolacci, & EJ Cripps. (2023). *''Evaluating probabilistic forecasts for maritime engineering operations''*. **Data-Centric Engineering**, 4:e15. [[Available here.]](https://www.cambridge.org/core/journals/data-centric-engineering/article/evaluating-probabilistic-forecasts-for-maritime-engineering-operations/17A5733A76CEBCFC6A74F5897F7D4D4B)
+
+OG Pollard, NL Barlow, LJ Gregoire, N Gomex, V Cartelle, JC Ely, & **LC Astfalck**. (2023). *''Quantifying the uncertainty in the Eurasian ice-sheet geometry at the Penultimate Glacial Maximum (Marine Isotope Stage 6)''*. **The Cryosphere Discussions**, 17(11):4751– 4777. [[Available here.]](https://tc.copernicus.org/articles/17/4751/2023/tc-17-4751-2023.pdf)
+
+N Gandy, **LC Astfalck**, LJ Gregoire, RF Ivanovic, & VL Patterson. (2023). *''De-tuning a coupled climate ice sheet model to simulate the North American ice sheet at the Last Glacial Maximum''*. **Journal of Geophysical Research: Earth Surface**, 128(8):e2023JF007250. [[Available here.]](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2023JF007250)
+
+---
+
+### 2022 and earlier (pre-postdoctoral research)
+
+MA Loake, **LC Astfalck**, & EJ Cripps. *''Modelling sea surface wind measurements on Australia’s North-West Shelf''*'. **Ocean Engineering**, 244:110308. [[Available here.]](https://www.sciencedirect.com/science/article/pii/S0029801821016115)
+
+<!-- ### 2020 -->
+
+M Masarei, **LC Astfalck**, AL Guzzomi, DJ Merritt, & TE Erickson. (2020). *''Soil rock content influences the maximum seedling emergence depth of a dominant arid zone grass''*. **Plant and Soil**, 450(1):497–509. [[Available here.]](https://link.springer.com/article/10.1007/s11104-020-04493-5)
+
+<!-- ### 2019 -->
+
+**LC Astfalck**, EJ Cripps, MR Hodkiewicz, & IA Milne. (2019). *''A Bayesian approach to the quantification of extremal responses in simulated dynamic structures''*. **Ocean Engineering**, 182:594–607. [[Available here.]](https://www.sciencedirect.com/science/article/pii/S0029801819301738)
+
+**LC Astfalck**, EJ Cripps, JP Gosling, & IA Milne. (2019). *''Emulation of vessel motion simulators for computationally efficient uncertainty quantification''*. **Ocean Engineering**, 172:726–736. [[Available here.]](https://www.sciencedirect.com/science/article/pii/S0029801818310898)
+
+<!-- ### 2018 -->
+
+**LC Astfalck**, EJ Cripps, JP Gosling, MR Hodkiewicz, & IA Milne. (2018). *''Expert elicitation of directional metocean parameters''*. **Ocean Engineering**, 161:268–276. [[Available here.]](https://www.sciencedirect.com/science/article/pii/S0029801818305353)
+
+<!-- ### 2017 -->
+
+**LC Astfalck**, GK Kelly, X Li, & TB Sercombe. (2017). *''On the breakdown of SiC during the selective laser melting of aluminum matrix composites''*. **Advanced Engineering Materials**, 19(8):1600835. [[Available here.]](https://onlinelibrary.wiley.com/doi/full/10.1002/adem.201600835)
+
+**LC Astfalck**, & MR Hodkiewicz. (2017). *''Hamiltonian Monte Carlo sampling for Bayesian hierarchical regression in prognostics''*'*. **Asia Pacific Conference of the Prognostics and Health Management Society**.
+
+**LC Astfalck**, MR Hodkiewicz, A Keating, EJ Cripps, & M Pecht. (2016). ''*A modelling ecosystem for prognostics''*. **Annual Conference of the Prognostics and Health Management Society.**
+
+J Sikorska, MR Hodkiewicz, A D’Cruz, **LC Astfalck**, and A Keating. *''A collaborative data library for testing prognostic models''*. **Prognostics and Health Management Society European Conference.**

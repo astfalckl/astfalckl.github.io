@@ -1,0 +1,33 @@
+project:
+  type: website
+  resources:
+    - cv.pdf
+  output-dir: docs
+
+website:
+  title: "Lachlan Astfalck"
+  navbar:
+    background: light
+    foreground: dark
+    search: false
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Publications"
+        href: publications.qmd
+      - text: "CV"
+        href: astfalck_cv.pdf
+
+  page-footer:
+    left: "© Copyright 2024 Lachlan Astfalck. Unless stated otherwise, all text and images licensed CC-BY-NC 4.0."
+
+format:
+  html:
+    theme: sandstone
+    css: styles.css
+    toc: false
+    grid:
+      body-width: 1200px
+
+
+

@@ -1,0 +1,79 @@
+[
+  {
+    "objectID": "walkthrough.html",
+    "href": "walkthrough.html",
+    "title": "Hello, Quarto",
+    "section": "",
+    "text": "Markdown is an easy to read and write text format:\n\nIt’s plain text so works well with version control\nIt can be rendered into HTML, PDF, and more\nLearn more at: https://quarto.org/docs/authoring/"
+  },
+  {
+    "objectID": "walkthrough.html#markdown",
+    "href": "walkthrough.html#markdown",
+    "title": "Hello, Quarto",
+    "section": "",
+    "text": "Markdown is an easy to read and write text format:\n\nIt’s plain text so works well with version control\nIt can be rendered into HTML, PDF, and more\nLearn more at: https://quarto.org/docs/authoring/"
+  },
+  {
+    "objectID": "walkthrough.html#code-cell",
+    "href": "walkthrough.html#code-cell",
+    "title": "Hello, Quarto",
+    "section": "Code Cell",
+    "text": "Code Cell\nHere is a Python code cell:\n\nimport os\nos.cpu_count()\n\n12"
+  },
+  {
+    "objectID": "walkthrough.html#equation",
+    "href": "walkthrough.html#equation",
+    "title": "Hello, Quarto",
+    "section": "Equation",
+    "text": "Equation\nUse LaTeX to write equations:\n\\[\n\\chi' = \\sum_{i=1}^n k_i s_i^2\n\\]"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Lachlan Astfalck",
+    "section": "",
+    "text": "I am a Research Fellow for the TIDE ARC ITRH in the School of Physics, Mathematics and Computing at The University of Western Australia.\nI am a research statistician with interest in both methodological and applied research. From a methodological standpoint, I have interest in spectral analysis, emulation of engineering computer models, and many aspects of uncertainty quantification. I also do lots of applied work in oceanography and hydrodynamics.\nI was previously a Research Fellow in the School of Earth and Environment at the University of Leeds where I worked on uncertainty quantification in paleo-climate glaciology.\nI have also worked in ecological restoration, materials engineering, prognostics and health management, and have consulted for the Australian Wildlife Conservancy."
+  },
+  {
+    "objectID": "index.html#about",
+    "href": "index.html#about",
+    "title": "Lachlan Astfalck",
+    "section": "",
+    "text": "I am a Research Fellow for the TIDE ARC ITRH in the School of Physics, Mathematics and Computing at The University of Western Australia.\nI am a research statistician with interest in both methodological and applied research. From a methodological standpoint, I have interest in spectral analysis, emulation of engineering computer models, and many aspects of uncertainty quantification. I also do lots of applied work in oceanography and hydrodynamics.\nI was previously a Research Fellow in the School of Earth and Environment at the University of Leeds where I worked on uncertainty quantification in paleo-climate glaciology.\nI have also worked in ecological restoration, materials engineering, prognostics and health management, and have consulted for the Australian Wildlife Conservancy."
+  },
+  {
+    "objectID": "index.html#bio",
+    "href": "index.html#bio",
+    "title": "Lachlan Astfalck",
+    "section": "Bio",
+    "text": "Bio\nI’m a PhD candidate in Colin Beier’s lab, working on new tools to make complex, broad-scale systems easier for humans to understand. Right now, that means I split my time between predictive modeling (to monitor forest carbon sequestration across New York State, track the development of early-successional forests, and more) and visualization (including using game engines as a GIS and making it easier to make reproducible VR environments for research). By training I’m either an ecologist (specializing in landscape and translational ecology) or environmental scientist; professionally, I’ve worked as a data analyst, software engineer, and chicken farmer.\nOn this site I keep a list of my publications, presentations, and my CV, as well as a technical blog."
+  },
+  {
+    "objectID": "index.html#selected-papers",
+    "href": "index.html#selected-papers",
+    "title": "Lachlan Astfalck",
+    "section": "Selected Papers",
+    "text": "Selected Papers\nAstfalck LC, Sykulski AM, Cripps EJ. (2024). ‘’Debiasing Welch’s Method for Spectral Density Estimation’’, Biometrika, asae033. [Available here.]\nAstfalck, LC, Williamson, DB, Gandy, N, Gregoire, LJ, & Ivanovic, RF. (2024). ‘’Coexchangeable Process Modeling for Uncertainty Quantification in Joint Climate Reconstruction’’. Journal of the American Statistical Association, 1-14. [Available here.]\nAstfalck, LC, Bird, CR, & Williamson, DB. (2024). ‘’Generalised Bayes Linear Inference’’. Submitted to The Journal of the Royal Statistical Society: Series B. [Available here.]"
+  },
+  {
+    "objectID": "index.html#supervision",
+    "href": "index.html#supervision",
+    "title": "Lachlan Astfalck",
+    "section": "Supervision",
+    "text": "Supervision"
+  },
+  {
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "Lachlan Astfalck",
+    "section": "Contact",
+    "text": "Contact\nPlease contact me via email, I very seldom check any social media channels, including LinkedIn. I am accepting research students in statistics and oceanography, don’t be shy in reaching out. I also have some capacity for statistical/data-science consulting or other applied research should my expertise be of interest."
+  }
+]

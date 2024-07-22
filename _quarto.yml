@@ -1,7 +1,5 @@
 project:
   type: website
-  resources:
-    - cv.pdf
   output-dir: docs
 
 website:

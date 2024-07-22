@@ -88,6 +88,20 @@
     "href": "software.html",
     "title": "Software",
     "section": "",
-    "text": "speccy\n\nR package for modern spectral analysis. This is written to be a one stop shop for spectral analysis in R.\n\n\n\n\n\nbayeslinear\n\nR package for Bayes linear analysis. This package includes all the old school Bayes linear mathematics, as well as the recent ‘generalised’ developments.\n\n\n\n\n\ndwelch\n\nR package to accompany the paper ‘Debiasing Welch’s Method for Spectral Density Estimation’. This code has been largely subsummed in speccy.\n\n\n\n\n\ngptide\n\nA lightweight module for Gaussian process regression toolkit in python. There are many other Gaussian Process packages – this package is yet another one. The selling point of this package is that the object is fairly straightforward and the kernel building is all done with functions, not abstract classes."
+    "text": "speccy\n\nR package for modern spectral analysis. This is written to be a one stop shop for spectral analysis in R.\n\n\n\n\n\nbayeslinear\n\nR package for Bayes linear analysis. This package includes all the old school Bayes linear mathematics, as well as the recent ‘generalised’ developments.\n\n\n\n\n\ndwelch\n\nR package to accompany the paper ‘Debiasing Welch’s Method for Spectral Density Estimation’. This code has been largely subsummed in speccy.\n\n\n\n\n\ngptide\n A lightweight module for Gaussian process regression toolkit in python. There are many other Gaussian Process packages -- this package is yet another one. The selling point of this package is that the object is fairly straightforward and the kernel building is all done with functions, not abstract classes."
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Hill climbs\n\n\ntmp\n\n\nMapping the top Lancashire cycle hill climbs in leaflet.\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/test/index.html",
+    "href": "projects/test/index.html",
+    "title": "Hill climbs",
+    "section": "",
+    "text": "I like cycling. I’m not great at going fast, but I quite enjoy puffing my way to the top of a hill."
   }
 ]

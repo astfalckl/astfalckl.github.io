@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Software – Lachlan Astfalck</title>
+<title>Projects – Lachlan Astfalck</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -66,7 +68,65 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-subtitle','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -97,8 +157,12 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./software.html" aria-current="page"> 
+    <a class="nav-link" href="./software.html"> 
 <span class="menu-text">Software</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./projects.html" aria-current="page"> 
+<span class="menu-text">Projects</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -117,7 +181,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Software</h1>
+<h1 class="title">Projects</h1>
 </div>
 
 
@@ -134,41 +198,39 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<hr>
-<p><img align="left" width="150" height="150" hspace="20" src="speccy.jpg"></p>
-<section id="speccy" class="level3">
-<h3 class="anchored" data-anchor-id="speccy"><a href="https://github.com/astfalckl/speccy">speccy</a></h3>
-<div style="min-height:105px;">
-R package for modern spectral analysis. This is written to be a one stop shop for spectral analysis in R.
-</div>
-<hr>
-<p><img align="left" width="150" height="150" hspace="20" src="bayeslinear.jpg"></p>
-</section>
-<section id="bayeslinear" class="level3">
-<h3 class="anchored" data-anchor-id="bayeslinear"><a href="https://github.com/astfalckl/bayeslinear">bayeslinear</a></h3>
-<div style="min-height:105px;">
-R package for Bayes linear analysis. This package includes all the old school Bayes linear mathematics, as well as the recent ‘generalised’ developments.
-</div>
-<hr>
-<p><img align="left" width="150" height="150" hspace="20" src="dwelch.jpg"></p>
-</section>
-<section id="dwelch" class="level3">
-<h3 class="anchored" data-anchor-id="dwelch"><a href="https://github.com/astfalckl/dwelch">dwelch</a></h3>
-<div style="min-height:105px;">
-R package to accompany the paper ‘Debiasing Welch’s Method for Spectral Density Estimation’. This code has been largely subsummed in <a href="https://github.com/astfalckl/speccy">speccy</a>.
-</div>
-<hr>
-<p><img align="left" width="150" height="150" hspace="20" src="gptide.jpeg"></p>
-</section>
-<section id="gptide" class="level3">
-<h3 class="anchored" data-anchor-id="gptide"><a href="https://github.com/TIDE-ITRH/gptide">gptide</a></h3>
-<div style="min-height:105px;" overflow:auto;=""> A lightweight module for Gaussian process regression toolkit in python. There are many other Gaussian Process packages -- this package is yet another one. The selling point of this package is that the object is fairly straightforward and the kernel building is all done with functions, not abstract classes. </div>
-<hr>
 
 
-</section>
 
-</main> <!-- /main -->
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-left" data-index="0" data-listing-file-modified-sort="1721641788493" data-listing-reading-time-sort="1" data-listing-word-count-sort="22">
+<div class="thumbnail">
+<p><a href="./projects/test/index.html" class="no-external"></a></p><a href="./projects/test/index.html" class="no-external">
+<p><img loading="lazy" src="./projects/test/headshot.jpg" class="thumbnail-image" style="height: 150px;"></p>
+</a><p><a href="./projects/test/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./projects/test/index.html" class="no-external">Hill climbs</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./projects/test/index.html" class="no-external">tmp</a>
+</div>
+<div class="listing-description">
+<a href="./projects/test/index.html" class="no-external">Mapping the top Lancashire cycle hill climbs in leaflet.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./projects/test/index.html" class="no-external"></a></p><a href="./projects/test/index.html" class="no-external">
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

@@ -15,8 +15,6 @@ website:
         href: index.qmd
       - text: "Publications"
         href: publications.qmd
-      - text: "CV"
-        href: astfalck_cv.pdf
 
   page-footer:
     left: "© Copyright 2024 Lachlan Astfalck. Unless stated otherwise, all text and images licensed CC-BY-NC 4.0."

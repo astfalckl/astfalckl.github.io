@@ -1,0 +1,15 @@
+---
+title: "Some Recent, and Rediscovered, Developments in Bayes Linear Statistics"
+subtitle: "Seminar presented to the University of Exeter"
+date: "2024-08-28"
+# description: " "
+image: image4.jpeg
+---
+
+### Abstract
+
+Bayes linear statistics eschews probabilistic assumptions and instead poses the statistical inference problem by viewing expectation, rather than probability, as the fundamental unit of belief. Bayes linear techniques were most popular throughout the 80s and 90s when computational power was small(er) and MCMC methods were nascent. In the present day, Bayes linear inference has been largely supplanted by probabilistic techniques and is commonly reduced to *''the Bayes linear equations''*', viewed as the Gaussian update when we don’t want to be explicit about assuming Gaussianity. This is unfortunate as the Bayes linear paradigm provides a coherent and principled framework by which we can update beliefs without the burden of forming fully probabilistic belief specifications. Even beyond philosophy, a Bayes linear analysis can be much faster than a similar probabilistic analysis and implies a simpler specification of prior quantities. In this presentation I’ll examine some recent developments that attempt to rescue Bayes linear statistics from history’s maw and will argue for the role of Bayes linear statistics in the modern statistician’s toolbox. Examples will be provided from coexchangeability modelling in climate science, the analysis of UK COVID19 deaths, and emulating an afforestation uptake model.
+
+### Links
+
+coming...

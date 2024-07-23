@@ -1,8 +1,0 @@
----
-title: "Hill climbs"
-subtitle: "tmp"
-description: "Mapping the top Lancashire cycle hill climbs in leaflet."
-image: headshot.jpg
----
-
-I like cycling. I'm not great at going fast, but I quite enjoy puffing my way to the top of a hill.

@@ -1,0 +1,17 @@
+---
+title: "Inferring nonlinear internal wave currents from sparse observations"
+subtitle: "Conference presentation to the 2022 FOO/ACOMO Combined Workshop"
+date: "2022-11-21"
+# description: " "
+image: image2.jpeg
+---
+
+### Abstract
+
+Nonlinear internal waves (often referred to as solitons) produce transient bursts of high velocity as they propagate on the continental shelf, leading to massive structural loads that disrupt offshore operations. These waves are difficult to both characterise and predict with ocean circulation numerical models or existing monitoring techniques. Observing the spatial and temporal properties of internal waves is difficult and typically only sparse observations are available. We have developed methodology to efficiently model and predict internal wave properties and behaviour using modern statistical and machine learning methods. The methodologies are Bayesian, meaning that we can quantify uncertainty over the parameter estimates and predictions in a mathematically coherent way, leading to probabilistic inference and forecasting. Robust statistical modelling of internal wave behaviour will lead to better numerical modelling (due to more realistic boundary conditions), better site characterisation (to inform operations), and better forecasting (for existing operations). This presentation will focus on some of the methodologies being developed within the Ocean’s Graduate School at the University of Western Australia to better characterise and predict internal wave behaviour, with focus on the Australian North-West Shelf.
+
+### Links
+
+[[pdf]](foo_acomo.pdf) [[keynote]](foo_acomo.key) [[conference listing]](https://conferences.com.au/inferring-nonlinear-internal-wave-currents-from-sparse-observations-using-machine-learning/)
+
+See keynote presentation for animations.

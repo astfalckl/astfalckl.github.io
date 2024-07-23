@@ -103,5 +103,61 @@
     "title": "Hill climbs",
     "section": "",
     "text": "I like cycling. I’m not great at going fast, but I quite enjoy puffing my way to the top of a hill."
+  },
+  {
+    "objectID": "presentations.html",
+    "href": "presentations.html",
+    "title": "Presentations",
+    "section": "",
+    "text": "Applications of Gaussian Processes in Oceanography\n\n\nInvited Lecture to the Gaussian Process Summer School, The University of Manchester\n\n\n\n\n\n\n\n\nSep 12, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nSome Recent, and Rediscovered, Developments in Bayes Linear Statistics\n\n\nSeminar presented to the University of Exeter\n\n\n\n\n\n\n\n\nAug 28, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nDebiasing Welch’s Method for Spectral Density Estimation\n\n\nSeminar presented in various forms to Imperial College London, Lancaster University, Durham University, and The University of Western Australia\n\n\n\n\n\n\n\n\nOct 12, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nInferring nonlinear internal wave currents from sparse observations\n\n\nConference presentation to the 2022 FOO/ACOMO Combined Workshop\n\n\n\n\n\n\n\n\nNov 21, 2022\n\n\n\n\n\n\n\n\n\n\n\n\nReconstructing Boundary Conditions for Complex Simulations with Application to Climate Models\n\n\nInvited presentation to the Conference of the Royal Statistical Society\n\n\n\n\n\n\n\n\nSep 7, 2021\n\n\n\n\n\n\n\n\n\n\n\n\nKriging Demystified\n\n\nWorkshop given to the School of Earth and Environment, University of Leeds\n\n\n\n\n\n\n\n\nMay 20, 2021\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "presentations/test/index.html",
+    "href": "presentations/test/index.html",
+    "title": "Hill climbs",
+    "section": "",
+    "text": "Sections\nI like cycling. I’m not great at going fast, but I quite enjoy puffing my way to the top of a hill. I like cycling. I’m not great at going fast, but I quite enjoy puffing my way to the top of a hill. I like cycling. I’m not great at going fast, but I quite enjoy puffing my way to the top of a hill. I like cycling. I’m not great at going fast, but I quite enjoy puffing my way to the top of a hill."
+  },
+  {
+    "objectID": "presentations/20240912_gp_summer_school/index.html",
+    "href": "presentations/20240912_gp_summer_school/index.html",
+    "title": "Applications of Gaussian Processes in Oceanography",
+    "section": "",
+    "text": "Abstract\nOceanography has long sought to understand the spatial and temporal structure of many different oceanographic processes: turbulent decay, tides, surface waves, internal waves, internal tides, and the list goes on. Most commonly, oceanographers use spectral analysis as the main tool to infer any parameters of interest, relying on regularly sampled observations of the particular process. This works well, for example, for mooring data that records temporal measurements at a single location in space, or for satellite data that records spatial measurements at single locations in time. Increasingly, we are building large data-sets that combine many different observation platforms with the aim to resolve the 3D (and 4D) spatio-temporal characteristics. Gaussian processes provide a principled method to merge all these data inside of a coherent inferential framework and are increasingly being recognised in oceanography. In this presentation, I will cover varied applications of Gaussian processes in oceanography, from relatively simple examples of temporal forecasting of surface tides, to some nascent attempts of inferring flow properties from multiple observation platforms. Finally, I’ll highlight some methodological gaps that we are looking to resolve.\n\n\nLinks\ncoming…"
+  },
+  {
+    "objectID": "presentations/20240828_bayeslinear_exeter/index.html",
+    "href": "presentations/20240828_bayeslinear_exeter/index.html",
+    "title": "Some Recent, and Rediscovered, Developments in Bayes Linear Statistics",
+    "section": "",
+    "text": "Abstract\nBayes linear statistics eschews probabilistic assumptions and instead poses the statistical inference problem by viewing expectation, rather than probability, as the fundamental unit of belief. Bayes linear techniques were most popular throughout the 80s and 90s when computational power was small(er) and MCMC methods were nascent. In the present day, Bayes linear inference has been largely supplanted by probabilistic techniques and is commonly reduced to ‘’the Bayes linear equations’’’, viewed as the Gaussian update when we don’t want to be explicit about assuming Gaussianity. This is unfortunate as the Bayes linear paradigm provides a coherent and principled framework by which we can update beliefs without the burden of forming fully probabilistic belief specifications. Even beyond philosophy, a Bayes linear analysis can be much faster than a similar probabilistic analysis and implies a simpler specification of prior quantities. In this presentation I’ll examine some recent developments that attempt to rescue Bayes linear statistics from history’s maw and will argue for the role of Bayes linear statistics in the modern statistician’s toolbox. Examples will be provided from coexchangeability modelling in climate science, the analysis of UK COVID19 deaths, and emulating an afforestation uptake model.\n\n\nLinks\ncoming…"
+  },
+  {
+    "objectID": "presentations/20231012_imperial_seminar/index.html",
+    "href": "presentations/20231012_imperial_seminar/index.html",
+    "title": "Debiasing Welch’s Method for Spectral Density Estimation",
+    "section": "",
+    "text": "Abstract\nMost non-parametric spectral estimation methodologies are based on transformations of the periodogram, a biased and statistically inconsistent estimator to the true spectral density. To enforce consistency, we average partitions of the periodogram; although, doing so increases the bias. Consequently, we become increasingly certain in an estimate that is increasingly wrong. This is particularly seen in Welch’s estimator, the most widespread estimator for non-parametric spectral density estimation in the engineering and physical sciences. In this seminar we show, by extending some recent results, how to debias Welch’s estimate whilst retaining optimal convergence guarantees. This results in a non-parametric estimator to the spectral density that is optimally convergent in RMSE, a property, until now, absent in the literature. We show results for efficient computation and demonstrate application across a range of oceanographic and hydrodynamic datasets.\n\n\nLinks\n[pdf]"
+  },
+  {
+    "objectID": "presentations/20221125_FOO_ACOMO/index.html",
+    "href": "presentations/20221125_FOO_ACOMO/index.html",
+    "title": "Inferring nonlinear internal wave currents from sparse observations",
+    "section": "",
+    "text": "Abstract\nNonlinear internal waves (often referred to as solitons) produce transient bursts of high velocity as they propagate on the continental shelf, leading to massive structural loads that disrupt offshore operations. These waves are difficult to both characterise and predict with ocean circulation numerical models or existing monitoring techniques. Observing the spatial and temporal properties of internal waves is difficult and typically only sparse observations are available. We have developed methodology to efficiently model and predict internal wave properties and behaviour using modern statistical and machine learning methods. The methodologies are Bayesian, meaning that we can quantify uncertainty over the parameter estimates and predictions in a mathematically coherent way, leading to probabilistic inference and forecasting. Robust statistical modelling of internal wave behaviour will lead to better numerical modelling (due to more realistic boundary conditions), better site characterisation (to inform operations), and better forecasting (for existing operations). This presentation will focus on some of the methodologies being developed within the Ocean’s Graduate School at the University of Western Australia to better characterise and predict internal wave behaviour, with focus on the Australian North-West Shelf.\n\n\nLinks\n[pdf] [keynote] [conference listing]\nSee keynote presentation for animations."
+  },
+  {
+    "objectID": "presentations/20210907_rss/index.html",
+    "href": "presentations/20210907_rss/index.html",
+    "title": "Reconstructing Boundary Conditions for Complex Simulations with Application to Climate Models",
+    "section": "",
+    "text": "Abstract\nAny experiment with climate models relies on a potentially large set of spatio-temporal boundary conditions. These can represent both the initial state of the system and/or forcings driving the model output throughout the experiment. These boundary conditions are typically fixed using available reconstructions in climate modeling studies; however, in reality they are highly uncertain, that uncertainty is unquantified, and the effect on the output of the experiment can be considerable. We develop efficient quantification of these uncertainties that combines relevant data from multiple models and observations. Starting from the coexchangeability model, we develop a coexchangeable process model to capture multiple correlated spatio-temporal fields of variables. We demonstrate that further exchangeability judgments over the parameters within this representation lead to a Bayes linear analogy of a hierarchical model. We use the framework to provide a joint reconstruction of sea-surface temperature and sea-ice concentration boundary conditions at the last glacial maximum (23–19 kya) and use it to force an ensemble of ice-sheet simulations using the FAMOUS-Ice coupled atmosphere and ice-sheet model. We demonstrate that existing boundary conditions typically used in these experiments are implausible given our uncertainties and demonstrate the impact of using more plausible boundary conditions on ice-sheet simulation. Supplementary materials for this article are available online, including a standardized description of the materials available for reproducing the work.\n\n\nLinks\n[pdf]"
+  },
+  {
+    "objectID": "presentations/20210520_kriging_demystified/index.html",
+    "href": "presentations/20210520_kriging_demystified/index.html",
+    "title": "Kriging Demystified",
+    "section": "",
+    "text": "Abstract\nThis was a workshop presentation given to the School of Earth and Environment about the fundamentals of Kriging. What is it? How does it work? What do we need to think about when Kriging? There is lots of information about this elsewhere, this was an attempt to help out some of the applied scientists with which I was learning.\n\n\nLinks\n[pdf]"
   }
 ]

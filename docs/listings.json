@@ -4,5 +4,16 @@
     "items": [
       "/projects/test/index.html"
     ]
+  },
+  {
+    "listing": "/presentations.html",
+    "items": [
+      "/presentations/20240912_gp_summer_school/index.html",
+      "/presentations/20240828_bayeslinear_exeter/index.html",
+      "/presentations/20231012_imperial_seminar/index.html",
+      "/presentations/20221125_FOO_ACOMO/index.html",
+      "/presentations/20210907_rss/index.html",
+      "/presentations/20210520_kriging_demystified/index.html"
+    ]
   }
 ]

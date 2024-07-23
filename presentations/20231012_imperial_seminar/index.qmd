@@ -1,0 +1,15 @@
+---
+title: "Debiasing Welch’s Method for Spectral Density Estimation"
+subtitle: "Seminar presented in various forms to Imperial College London, Lancaster University, Durham University, and The University of Western Australia"
+date: "2023-10-12"
+# description: " "
+image: image2.jpg
+---
+
+### Abstract
+
+Most non-parametric spectral estimation methodologies are based on transformations of the periodogram, a biased and statistically inconsistent estimator to the true spectral density. To enforce consistency, we average partitions of the periodogram; although, doing so increases the bias. Consequently, we become increasingly certain in an estimate that is increasingly wrong. This is particularly seen in Welch’s estimator, the most widespread estimator for non-parametric spectral density estimation in the engineering and physical sciences. In this seminar we show, by extending some recent results, how to debias Welch’s estimate whilst retaining optimal convergence guarantees. This results in a non-parametric estimator to the spectral density that is optimally convergent in RMSE, a property, until now, absent in the literature. We show results for efficient computation and demonstrate application across a range of oceanographic and hydrodynamic datasets.
+
+### Links
+
+[[pdf]](imperial_seminar.pdf)

@@ -1,0 +1,12 @@
+---
+title: "Presentations"
+listing:
+  contents: presentations
+  type: default  
+  sort: "date desc"
+  # grid-columns: 1
+  image-height: 180px
+  image-align: right
+---
+
+---

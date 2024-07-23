@@ -21,7 +21,7 @@ about:
 
 ## About
 
-I am a Research Fellow for the TIDE ARC ITRH in the School of Physics, Mathematics and Computing at The University of Western Australia.  
+I am a Research Fellow for the TIDE ARC ITRH in the School of Physics, Mathematics and Computing at The University of Western Australia.
 
 I am a research statistician with interest in both methodological and applied research. From a methodological standpoint, I have interest in spectral analysis, emulation of engineering computer models, and many aspects of uncertainty quantification. I also do lots of applied work in oceanography and hydrodynamics.
 
@@ -39,5 +39,5 @@ LC Astfalck, CR Bird, & Williamson, DB. (2024). *''Generalised Bayes Linear Infe
 
 ## Contact
 
-Please contact me via email, I very seldom check any social media channels, including LinkedIn. I am accepting research students in statistics and oceanography, don't be shy in reaching out. I also have some capacity for statistical/data-science consulting or other applied research should my expertise be of interest.
+Please contact me via email, I very seldom check any social media channels, including LinkedIn. I am accepting research students in statistics and oceanography, don't be shy in reaching out. I also have some capacity for statistical/data-science consulting or other applied research should my expertise be of interest. x
 

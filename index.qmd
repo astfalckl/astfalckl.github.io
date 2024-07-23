@@ -1,6 +1,6 @@
 ---
 title: "Lachlan Astfalck"
-image: headshot.jpg
+image: images/headshot.jpg
 about:
   template: trestles
   image-shape: rounded

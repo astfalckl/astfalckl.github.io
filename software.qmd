@@ -4,34 +4,33 @@ title: "Software"
 
 ---
 
-<img align="left" width="150" height="150" hspace="20" src="speccy.jpg">
+<img align="left" width="150" height="150" hspace="20" src="images/software/speccy.png">
 
-### [speccy](https://github.com/astfalckl/speccy)
+### [<tt>speccy</tt>](https://github.com/astfalckl/speccy)
 
-<div style="height:105px;"> R package for modern spectral analysis. This is written to be a one stop shop for spectral analysis in R. </div>
-
----
-
-<img align="left" width="150" height="150" hspace="20" src="bayeslinear.jpg">
-
-### [bayeslinear](https://github.com/astfalckl/bayeslinear)
-
-<div style="height:105px;"> R package for Bayes linear analysis. This package includes all the old school Bayes linear mathematics, as well as the recent 'generalised' developments. </div>
+<div style="min-height:105px;"> R package for modern spectral analysis. The plan is for this to be a one stop shop for spectral analysis in R. Still in development. </div>
 
 ---
 
-<img align="left" width="150" height="150" hspace="20" src="dwelch.jpg">
+<img align="left" width="150" height="150" hspace="20" src="images/software/bayeslinear.jpg">
 
-### [dwelch](https://github.com/astfalckl/dwelch)
+### [<tt>bayeslinear</tt>](https://github.com/astfalckl/bayeslinear)
 
-<div style="height:105px;"> R package to accompany the paper 'Debiasing Welch's Method for Spectral Density Estimation'. This code has been largely subsummed in [speccy](https://github.com/astfalckl/speccy). </div>
+<div style="min-height:105px;"> R package for Bayes linear analysis. This package includes all the old school Bayes linear mathematics, as well as the recent 'generalised' developments. </div>
 
 ---
 
-<img align="left" width="150" height="150" hspace="20" src="gptide.jpeg">
+<img align="left" width="150" height="150" hspace="20" src="images/software/dwelch2.jpg">
 
-### [gptide](https://github.com/TIDE-ITRH/gptide)
+### [<tt>dwelch</tt>](https://github.com/astfalckl/dwelch)
 
-<div style="height:105px;"> A lightweight module for Gaussian process regression toolkit in python. There are many other Gaussian Process packages -- this package is yet another one. The selling point of this package is that the object is fairly straightforward and the kernel building is all done with functions, not abstract classes. </div>
+<div style="min-height:105px;"> R package to accompany the paper 'Debiasing Welch's Method for Spectral Density Estimation'. This code will eventually be subsummed in [<tt>speccy</tt>](https://github.com/astfalckl/speccy). </div>
+
+---
+
+<img align="left" width="150" height="150" hspace="20" src="images/software/gptide.jpeg">
+
+### [<tt>gptide</tt>](https://gptide.readthedocs.io/en/latest/)
+<div style="min-height:105px;" overflow:auto;> A lightweight module for Gaussian process regression toolkit in python. There are many other Gaussian Process packages -- this package is yet another one. The selling point of this package is that the object is fairly straightforward and the kernel building is all done with functions, not abstract classes. </div>
 
 ---

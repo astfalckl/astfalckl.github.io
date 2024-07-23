@@ -21,7 +21,7 @@ about:
 
 ## About
 
-I am a Research Fellow for the TIDE ARC ITRH in the School of Physics, Mathematics and Computing at The University of Western Australia. 
+I am a Research Fellow for the TIDE ARC ITRH in the School of Physics, Mathematics and Computing at The University of Western Australia.  
 
 I am a research statistician with interest in both methodological and applied research. From a methodological standpoint, I have interest in spectral analysis, emulation of engineering computer models, and many aspects of uncertainty quantification. I also do lots of applied work in oceanography and hydrodynamics.
 

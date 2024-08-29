@@ -15,5 +15,11 @@
       "/presentations/20210907_rss/index.html",
       "/presentations/20210520_kriging_demystified/index.html"
     ]
+  },
+  {
+    "listing": "/writing.html",
+    "items": [
+      "/writing/20240729_derivatives_of_gps/index.html"
+    ]
   }
 ]

@@ -1,0 +1,13 @@
+---
+title: "Writing"
+listing:
+  contents: writing
+  type: table
+  sort: "date desc"
+  fields: [title, date]
+  table-hover: true
+---
+
+This is unorganised collection of some professional writing. Many of these posts are ideas or proofs that I am convincing myself of, or ideas that I am trying to communicate to others at work. In any case, this is a collection of things that I hope may contribute to the research of others.
+
+---

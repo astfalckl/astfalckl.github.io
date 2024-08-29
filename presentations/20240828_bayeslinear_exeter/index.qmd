@@ -12,4 +12,4 @@ Bayes linear statistics eschews probabilistic assumptions and instead poses the 
 
 ### Links
 
-coming...
+[[pdf]](bayes_linear.pdf)

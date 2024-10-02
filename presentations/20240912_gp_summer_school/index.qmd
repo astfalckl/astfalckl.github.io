@@ -12,4 +12,4 @@ Oceanography has long sought to understand the spatial and temporal structure of
 
 ### Links
 
-coming...
+[[pdf]](gps_in_oceanography.pdf)

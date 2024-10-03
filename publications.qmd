@@ -10,11 +10,13 @@ title: "Publications"
 
 MD Rayson, **LC Astfalck**, ALS Ponte, AP Zulberti, and NL Jones. *''Characteristic velocity and timescales of non-phase-locked internal tides in a mesoscale eddy field''*'. Submitted to the **Journal of Geophysical Research: Oceans**. [[Available here.]](https://d197for5662m48.cloudfront.net/documents/publicationstatus/223089/preprint_pdf/71021111be283ea5a5e692a9e0375414.pdf)
 
+RY Zhang, HB Moss, **LC Astfalck**, EJ Cripps, and DS Leslie. *''BALLAST: Bayesian Active Learning with Look-ahead Amendment for Sea-drifter Trajectories''*'. Submitted to the **NeurIPS 2024 Workshop on Bayesian Decision-making and Uncertainty**.
+
 ### 2024
 
 **LC Astfalck**, AM Sykulski, & EJ Cripps. (2024). *''Debiasing Welch’s Method for Spectral Density Estimation''*, **Biometrika**, asae033. [[Available here.]](https://academic.oup.com/biomet/advance-article/doi/10.1093/biomet/asae033/7703280)
 
-**LC Astfalck**, DB Williamson, N Gandy, LJ Gregoire, & RF Ivanovic. (2024). *''Coexchangeable Process Modeling for Uncertainty Quantification in Joint Climate Reconstruction''*. **Journal of the American Statistical Association**, 1-14. [[Available here.]](https://www.tandfonline.com/doi/full/10.1080/01621459.2024.2325705)
+**LC Astfalck**, DB Williamson, N Gandy, LJ Gregoire, & RF Ivanovic. (2024). *''Coexchangeable Process Modeling for Uncertainty Quantification in Joint Climate Reconstruction''*. **Journal of the American Statistical Association**, 119(547), 1751–1764. [[Available here.]](https://www.tandfonline.com/doi/full/10.1080/01621459.2024.2325705)
 
 ALS Ponte, **LC Astfalck**, MD Rayson, AP Zulberti, & NL Jones. (2024). *''Inferring flow energy, space and time scales: freely-drifting vs fixed point observations''*. Accepted in **Nonlinear Processes in Geophysics**. [[Available here.]](https://npg.copernicus.org/preprints/npg-2024-10/)
 

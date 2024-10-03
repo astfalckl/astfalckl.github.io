@@ -1,0 +1,17 @@
+---
+title: "An Introduction to Machine Learning"
+subtitle: "Invited Lecture to the University of Western Australia"
+date: "2024-07-01"
+# description: " "
+image: iStock-1205321953.jpg.png
+---
+
+This lecture was written for second-year engineering students who do no necessarily have any experience with statistical inference or machine learning. It was written to be a very general introduction to the topic and does not contain any difficult mathematics; only broad concepts, ideas, and opinions.
+
+### Abstract
+
+Machine learning has rapidly become a cornerstone of modern data analysis, enabling computers to identify patterns, make decisions, and improve their performance over time without being explicitly programmed. This presentation provides an accessible introduction to the key concepts and techniques in machine learning. We will explore the facets of a machine learning analysis, the fundamentals of supervised, unsupervised and reinforcement learning, and some key algorithms. Attendees will gain an understanding of how machine learning is applied across various industries and how to approach building and deploying machine learning models. No prior knowledge of machine learning is required, making this talk ideal for beginners interested in harnessing the power of intelligent systems.
+
+### Links
+
+[[pdf]](intro_to_ml.pdf)

@@ -6,11 +6,11 @@ title: "Publications"
 
 ### In Review
 
-LC Astfalck, CR Bird, & Williamson, DB. (2024). *''Generalised Bayes Linear Inference''*. Submitted to **Bayesian Analysis**. [[Available here.]](https://arxiv.org/pdf/2405.14145)
+**LC Astfalck**, CR Bird, & Williamson, DB. (2024). *''Generalised Bayes Linear Inference''*. Submitted to **Bayesian Analysis**. [[Available here.]](https://arxiv.org/pdf/2405.14145)
 
-LC Astfalck, AM Sykulski, & EJ Cripps. (2024). *''Bias Correction of Quadratic Spectral Estimators''*, Submitted to **Biometrika**. [[Available here.]](https://arxiv.org/pdf/2410.12386)
+**LC Astfalck**, AM Sykulski, & EJ Cripps. (2024). *''Bias Correction of Quadratic Spectral Estimators''*, Submitted to **Biometrika**. [[Available here.]](https://arxiv.org/pdf/2410.12386)
 
-MD Rayson, **LC Astfalck**, ALS Ponte, AP Zulberti, and NL Jones. *''Characteristic velocity and timescales of non-phase-locked internal tides in a mesoscale eddy field''*'. Submitted to the **Journal of Geophysical Research: Oceans**. [[Available here.]](https://d197for5662m48.cloudfront.net/documents/publicationstatus/223089/preprint_pdf/71021111be283ea5a5e692a9e0375414.pdf)
+MD Rayson, **LC Astfalck**, ALS Ponte, AP Zulberti, and NL Jones. (2024). *''Characteristic velocity and timescales of non-phase-locked internal tides in a mesoscale eddy field''*'. Submitted to the **Journal of Geophysical Research: Oceans**. [[Available here.]](https://d197for5662m48.cloudfront.net/documents/publicationstatus/223089/preprint_pdf/71021111be283ea5a5e692a9e0375414.pdf)
 
 ### 2024
 

@@ -6,11 +6,11 @@ title: "Publications"
 
 ### In Review
 
-**LC Astfalck**, CR Bird, & DB Williamson. (2024). *''Generalised Bayes Linear Inference''*. Submitted to **The Journal of the Royal Statistical Society: Series B (discussions)**. [[Available here.]](https://arxiv.org/pdf/2405.14145)
+LC Astfalck, CR Bird, & Williamson, DB. (2024). *''Generalised Bayes Linear Inference''*. Submitted to **Bayesian Analysis**. [[Available here.]](https://arxiv.org/pdf/2405.14145)
+
+LC Astfalck, AM Sykulski, & EJ Cripps. (2024). *''Bias Correction of Quadratic Spectral Estimators''*, Submitted to **Biometrika**. [[Available here.]](https://arxiv.org/pdf/2410.12386)
 
 MD Rayson, **LC Astfalck**, ALS Ponte, AP Zulberti, and NL Jones. *''Characteristic velocity and timescales of non-phase-locked internal tides in a mesoscale eddy field''*'. Submitted to the **Journal of Geophysical Research: Oceans**. [[Available here.]](https://d197for5662m48.cloudfront.net/documents/publicationstatus/223089/preprint_pdf/71021111be283ea5a5e692a9e0375414.pdf)
-
-RY Zhang, HB Moss, **LC Astfalck**, EJ Cripps, and DS Leslie. *''BALLAST: Bayesian Active Learning with Look-ahead Amendment for Sea-drifter Trajectories''*'. Submitted to the **NeurIPS 2024 Workshop on Bayesian Decision-making and Uncertainty**.
 
 ### 2024
 
@@ -19,6 +19,8 @@ RY Zhang, HB Moss, **LC Astfalck**, EJ Cripps, and DS Leslie. *''BALLAST: Bayesi
 **LC Astfalck**, DB Williamson, N Gandy, LJ Gregoire, & RF Ivanovic. (2024). *''Coexchangeable Process Modeling for Uncertainty Quantification in Joint Climate Reconstruction''*. **Journal of the American Statistical Association**, 119(547), 1751–1764. [[Available here.]](https://www.tandfonline.com/doi/full/10.1080/01621459.2024.2325705)
 
 ALS Ponte, **LC Astfalck**, MD Rayson, AP Zulberti, & NL Jones. (2024). *''Inferring flow energy, space and time scales: freely-drifting vs fixed point observations''*. Accepted in **Nonlinear Processes in Geophysics**. [[Available here.]](https://npg.copernicus.org/preprints/npg-2024-10/)
+
+RY Zhang, HB Moss, **LC Astfalck**, EJ Cripps, and DS Leslie. (2024). *''BALLAST: Bayesian Active Learning with Look-ahead Amendment for Sea-drifter Trajectories''*'. **NeurIPS 2024 Workshop on Bayesian Decision-making and Uncertainty**.
 
 IA Milne, & **LC Astfalck**. (2024). *''Heave response spectra for a semisubmersible in long period swell''*. **24th Australasian Fluid Mechanics Conference**.
 

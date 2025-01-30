@@ -17,11 +17,11 @@ website:
         href: software.qmd
       - text: "Presentations"
         href: presentations.qmd
-      - text: "Writing"
-        href: writing.qmd
+      # - text: "Writing"
+      #   href: writing.qmd
 
   page-footer:
-    left: "© Copyright 2024 Lachlan Astfalck. Unless stated otherwise, all text and images licensed CC-BY-NC 4.0."
+    left: "© Copyright 2025 Lachlan Astfalck. Unless stated otherwise, all text and images licensed CC-BY-NC 4.0."
 
 format:
   html:

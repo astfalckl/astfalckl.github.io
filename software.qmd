@@ -4,6 +4,14 @@ title: "Software"
 
 ---
 
+<img align="left" width="150" height="150" hspace="20" src="images/software/bskernel.png">
+
+### [<tt>bskernel</tt>](https://astfalckl.github.io/bskernel/index.html)
+
+<div style="min-height:105px;"> This package provides flexible non-parametric auto-covariance function construction via spline kernels, as well as some handy tools for optimisation. </div>
+
+---
+
 <img align="left" width="150" height="150" hspace="20" src="images/software/speccy.png">
 
 ### [<tt>speccy</tt>](https://github.com/astfalckl/speccy)

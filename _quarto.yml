@@ -1,6 +1,9 @@
 project:
   type: website
+  resources:
+    - astfalck_cv.pdf
   output-dir: docs
+
 
 website:
   title: "Lachlan Astfalck"

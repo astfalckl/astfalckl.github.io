@@ -10,7 +10,7 @@ title: "Publications"
 
 **LC Astfalck**, D Sen, S Patra, EJ Cripps and DB Dunson. (2025). *''Posterior Projection for Inference in Constrained Spaces''*. Submitted to the **SIAM/ASA Journal on Uncertainty Quantification**. [[Available here.]](https://arxiv.org/abs/1812.05741)
 
-<!-- T Tang, **LC Astfalck** and DB Dunson. (2025). *''Efficient Baysiean inference for continuous time Markov chains''*. Submitted to the **Journal of Computational and Graphical Statistics**. -->
+T Tang, **LC Astfalck**, and DB Dunson. (2025). *''Efficient Bayesian Inference for Discretely Observed Continuous Time Markov Chains ''*. Submitted to the **Journal of the American Statistical Association**. [Link available shortly.]
 
 RY Zhang, HB Moss, **LC Astfalck**, EJ Cripps, and DS Leslie. (2025). *''Spatio-temporal active learning of time-dependent vector fields using Lagrangian observers''*'. Submitted to **The Thirty-Ninth Annual Conference on Neural Information Processing Systems**.
 

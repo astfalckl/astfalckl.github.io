@@ -1,0 +1,87 @@
+## Compactness {-}
+
+A subset $\mathbb{K} \subset \mathbb{X}$ of a metric space $(\mathbb{X}, d)$ is **compact** if every open cover of $\mathbb{K}$ has a finite subcover.  
+
+An **open cover** is any collection of open sets $\{U_\alpha\}_{\alpha \in A}$ such that  
+\[
+\mathbb{K} \subset \bigcup_{\alpha \in A} U_\alpha,
+\]
+meaning that each point of $\mathbb{K}$ lies inside at least one of the $U_\alpha$.  A **subcover** is a smaller collection of these sets that still covers $\mathbb{K}$.  
+
+Compactness says "whenever you try to cover $\mathbb{K}$ with (possibly infinitely many) open sets, a finite selection will do the job." Personally, I find this one of those overly mathematical notions that I'm sure exists for good reason, but it typically suffices just to say "its compact", and to live your life. Compactness quietly guarantees that local properties can be made global, and that limits behave well inside bounded regions.
+
+---
+
+**Example: Closed and Bounded Euclidean Space**
+
+In Euclidean space, a set is compact if and only if it is both closed and bounded. Again, it's a silly math game; normal people would just think, *of course it does, just pick the interval, plus minus a little bit, make it open, job done*. Alas, mathematicans demand more. Without loss of generality I'll show this for the interval $[0,1]$.
+
+Let $\mathcal{U} = \{U_\alpha\}_{\alpha \in A}$ be an open cover of $[0,1]$. We don't have to do more than this with this assumption, $\mathcal{U}$ just has to exist.
+
+Define
+\[
+S = \{\, x \in [0,1] : [0,x] \text{ can be covered by finitely many sets from } \mathcal{U}\,\}.
+\]
+That is, $S$ is a set of all of the points up to which we can achieve finite coverage between $[0,1]$. First, note that $S$ is nonempty since $0 \in S$ as you can always cover a point with an open set that bounds it. Next, note that the set is bounded above by $1$.
+
+Let $s = \sup S$. Assume, for contradiction, that $s < 1$. Because $\mathcal{U}$ covers $[0,1]$, there exists some $U_{\alpha_0} \in \mathcal{U}$ such that $s \in U_{\alpha_0}$. As $U_{\alpha_0}$ is open, there exists $\eta > 0$ with $(s - \eta, s + \eta) \subset U_{\alpha_0}$. This means we can cover a bit beyond $s$ using the same set $U_{\alpha_0}$.
+
+By the definition of $s$ as a supremum (i.e. maximum), for any $\eta>0$ there exists 
+$x\in S$ with $s-\eta/2<x\le s$. 
+Intuitively, $x$ is a point just short of $s$ that we can already reach with finitely many sets. 
+Since $x\in S$, the segment $[0,x]$ can be covered by finitely many members of $\mathcal{U}$; denote this finite subcover by $\mathcal{V}\subset\mathcal{U}$. 
+Because $s$ lies in the open set $U_{\alpha_0}$, there exists $\eta>0$ such that 
+$(s-\eta,s+\eta)\subset U_{\alpha_0}$, so this same open set covers a little interval past $s$. 
+Hence
+\[
+[0,\min\{1,s+\eta/2\}]\subset \left\{[0,x] \cup U_{\alpha_0}\right\}.
+\]
+The right-hand side is the union of finitely many sets from $\mathcal{U}$ (those in $\mathcal{V}$ together with $U_{\alpha_0}$) so 
+$[0,\min\{1,s+\eta/2\}]$ is finitely covered. 
+This contradicts the definition of $s$ as the least upper bound of $S$, because it shows that a point larger than $s$ can also be finitely covered. 
+Therefore $s=1$.
+
+---
+
+**Use Case: Lebesgue Number Theorem**
+
+One useful place I find myself envoking compactness is justifying the existence of a finite rectangular cover. This can be justified by the Lebesgue Number Theorem. The Theorem states:
+
+*Let $(\mathbb{X}, d)$ be a compact metric space and let $\{U_\alpha\}_{\alpha \in A}$ be an open cover of $\mathbb{X}$. Then there exists a number $\lambda > 0$ (called a Lebesgue number for the cover) such that for every subset $S \subset \mathbb{X}$ with $\mathrm{diam}(S) < \lambda$,*  
+\[
+S \subset U_\alpha \quad \text{for some } \alpha \in A.
+\]
+
+In particular, every ball $B(x, \lambda)$ of radius $\lambda$ around any point $x \in \mathbb{X}$ is contained in at least one member of the cover.
+
+
+**Corollary (Finite Rectangular Cover).**  
+Let $I \subset \mathbb{R}^n$ be a compact rectangle and $\{U_\alpha\}_{\alpha \in A}$ an open cover of $I$.  Then there exists $\lambda > 0$ such that any closed rectangle $R \subset I$ with side lengths less than $\lambda / \sqrt{n}$ satisfies  
+\[
+R \subset U_\alpha \quad \text{for some } \alpha.
+\]
+Consequently, $I$ can be partitioned into finitely many such rectangles $\{R_j\}$, each contained in some $U_\alpha$.
+
+Compactness ensures the existence of a global “small enough” scale $\lambda$ that works uniformly across the space. Once $\lambda$ is known, we can subdivide a compact region into finitely many smaller boxes of diameter less than $\lambda$, knowing that each box will fit entirely inside one of the open sets of the cover.
+
+
+
+<!-- Equivalently — and more intuitively — $\mathbb{K}$ is compact if every sequence in $\mathbb{K}$ has a convergent subsequence whose limit also lies in $\mathbb{K}$.
+
+In Euclidean space, this simplifies beautifully: a set is compact **if and only if** it is both closed and bounded.  
+
+I often think of compactness as *finiteness without edges*: the set may be infinite, but you can’t “run off” it, and it can be captured by finitely many small boxes of any given size. Compactness is the analytic version of taming infinity. -->
+
+---
+
+<!-- ### Where this is useful
+
+Compactness quietly guarantees that local properties can be made global, and that limits behave well inside bounded regions.
+
+- **Uniform continuity and compactness** often work hand in hand: compactness lets you turn an infinite collection of local $\delta$–neighbourhoods into a **finite** cover, which in turn yields the kind of partitioning argument used in the Portmanteau Lemma.
+- Many foundational theorems lean on compactness:  
+  - **Extreme Value Theorem:** a continuous function on a compact set attains its maximum and minimum.  
+  - **Heine–Borel:** in $\mathbb{R}^n$, compact = closed + bounded.  
+  - **Bolzano–Weierstrass:** every bounded sequence has a convergent subsequence.
+
+In practice, compactness is how we make sure our analytic arguments don’t “leak” — it’s the difference between an $\epsilon$–$\delta$ statement that holds somewhere and one that holds *everywhere*. It turns infinitary reasoning into finite bookkeeping. -->

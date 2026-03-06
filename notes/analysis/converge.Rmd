@@ -1,0 +1,58 @@
+## Convergence {-}
+
+At some point in mathematics, everything becomes about sequences.  
+We want to understand what happens as things get closer, smaller, or repeated indefinitely — and to do that, we need a way of saying “this thing settles down.”  
+That is convergence.
+
+Formally, let $(\mathbb{X}, d)$ be a metric space, and let $(x_n)$ be a sequence in $\mathbb{X}$.  
+We say that $(x_n)$ **converges** to a point $x \in \mathbb{X}$ if, for every $\epsilon > 0$, there exists $N \in \mathbb{N}$ such that
+\[
+d(x_n, x) < \epsilon \quad \text{for all } n > N.
+\]
+We write this as $x_n \to x$, or equivalently, $\lim_{n \to \infty} x_n = x$.
+
+Intuitively, this just means that beyond some point, all terms of the sequence live inside any arbitrarily small $\epsilon$–ball around $x$.  
+No magic — just a formal way of saying “eventually, and thereafter, we stay close.”
+
+---
+
+### Example
+In $\mathbb{R}$ with the usual distance, the sequence
+\[
+x_n = 1 + \frac{1}{n}
+\]
+converges to $1$, because the terms can be made as close as you like to $1$ by choosing $n$ large enough.  
+Formally, given any $\epsilon > 0$, choose $N > 1/\epsilon$; then for all $n > N$,  
+\[
+|x_n - 1| = \frac{1}{n} < \epsilon.
+\]
+
+---
+
+### Convergent vs. Cauchy
+A sequence that converges will always be **Cauchy**, meaning its elements eventually get arbitrarily close to one another.  
+Formally, $(x_n)$ is *Cauchy* if, for every $\epsilon > 0$, there exists $N$ such that for all $m, n > N$,
+\[
+d(x_n, x_m) < \epsilon.
+\]
+The reverse is true only in **complete** spaces — those where every Cauchy sequence has a limit that actually exists inside the space.  
+This is what makes the real numbers $\mathbb{R}$ special: they’re *complete*.  
+The rationals $\mathbb{Q}$ are not — plenty of Cauchy sequences in $\mathbb{Q}$ “want” to converge to an irrational number that isn’t in the set.
+
+---
+
+### Limit Points
+Sometimes a sequence doesn’t converge, but parts of it do.  
+A point $x \in \mathbb{X}$ is a **limit point** (or *accumulation point*) of $(x_n)$ if there exists a subsequence $(x_{n_k})$ that converges to $x$.  
+Compact sets guarantee the existence of at least one limit point — this is the **Bolzano–Weierstrass Theorem**, and it’s the bridge between convergence and compactness.
+
+---
+
+### Why This Matters
+Convergence is the grammar of analysis.  
+Continuity, compactness, integration, and most of asymptotic statistics are just variations of this same idea: things approach, limits exist, and what happens in the limit is meaningful.  
+Convergence gives structure to infinity — it lets us talk about what happens “eventually” without having to get there.
+
+---
+
+*Aside:* A surprising amount of analysis can be understood by imagining the world as an enormous collection of sequences trying (and sometimes failing) to calm down.

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Becoming a Theory Wonk: Notes, Proofs and Pain</title>
+  <meta name="description" content="This is a" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Becoming a Theory Wonk: Notes, Proofs and Pain" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is a" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Becoming a Theory Wonk: Notes, Proofs and Pain" />
+  
+  <meta name="twitter:description" content="This is a" />
+  
+
+<meta name="author" content="Lachlan Astfalck" />
+
+
+<meta name="date" content="2025-10-22" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="literature.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<!-- macros.html -->
+<!-- v3-first config (rmarkdown/bookdown default today) -->
+<script>
+  window.MathJax = window.MathJax || {};
+  window.MathJax.tex = Object.assign({
+    packages: {'[+]': ['base', 'ams']},
+    macros: {
+      R: '{\\mathbb{R}}',
+      EE: '{\\mathbb{E}}',
+      Var: ['\\operatorname{Var}', 1],         // use as \Var{X}
+      argmin: '\\mathop{\\mathrm{arg\\,min}}',
+      argmax: '\\mathop{\\mathrm{arg\\,max}}',
+      inner: ['\\langle #1,\\, #2 \\rangle', 2] // \inner{x}{y}
+    }
+  }, window.MathJax.tex || {});
+  </script>
+  
+  <!-- Fallback for MathJax v2 (some older gitbook templates) -->
+  <script type="text/x-mathjax-config">
+  if (window.MathJax && MathJax.Hub) {
+    MathJax.Hub.Config({
+      TeX: {
+        extensions: ["AMSmath.js","AMSsymbols.js"],
+        Macros: {
+          P: "{\\mathrm{P}}",
+          E: "{\\mathbb{E}}",
+          Var: ["\\operatorname{Var}", 1],
+          argmin: "\\mathop{\\mathrm{arg\\,min}}",
+          argmax: "\\mathop{\\mathrm{arg\\,max}}",
+          inner: ["\\langle #1,\\, #2 \\rangle", 2]
+        }
+      }
+    });
+  }
+  </script>
+  
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Notes, Proofs and Pain</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overture</a></li>
+<li class="chapter" data-level="" data-path="literature.html"><a href="literature.html"><i class="fa fa-check"></i>Pro maioribus</a></li>
+<li class="chapter" data-level="1" data-path="analysis.html"><a href="analysis.html"><i class="fa fa-check"></i><b>1</b> Analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="compactness.html"><a href="compactness.html"><i class="fa fa-check"></i>Compactness</a></li>
+<li class="chapter" data-level="" data-path="uniform-continuity.html"><a href="uniform-continuity.html"><i class="fa fa-check"></i>Uniform Continuity</a></li>
+<li class="chapter" data-level="" data-path="infimum-and-supremum.html"><a href="infimum-and-supremum.html"><i class="fa fa-check"></i>Infimum and Supremum</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="linear.html"><a href="linear.html"><i class="fa fa-check"></i><b>2</b> Linear Algebra and Functional Analysis</a></li>
+<li class="chapter" data-level="3" data-path="measure.html"><a href="measure.html"><i class="fa fa-check"></i><b>3</b> Measure Theory</a></li>
+<li class="chapter" data-level="4" data-path="asymptotics.html"><a href="asymptotics.html"><i class="fa fa-check"></i><b>4</b> Asymptotic Statistics</a>
+<ul>
+<li class="chapter" data-level="" data-path="portmanteau-lemma.html"><a href="portmanteau-lemma.html"><i class="fa fa-check"></i>Portmanteau Lemma</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="weakly.html"><a href="weakly.html"><i class="fa fa-check"></i><b>5</b> Weakly Dependent Processes</a></li>
+<li class="divider"></li>
+<li><a href="https://astfalckl.github.io" target="blank">Lachlan Astfalck</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Becoming a Theory Wonk: Notes, Proofs and Pain</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Becoming a Theory Wonk: Notes, Proofs and Pain</h1>
+<p class="author"><em>Lachlan Astfalck</em></p>
+<p class="date"><em>2025-10-22</em></p>
+</div>
+<div id="overture" class="section level1 unnumbered hasAnchor">
+<h1>Overture<a href="index.html#overture" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<!-- I am not a mathematician or a statistician by training. You may be forgiven for thinking otherwise, given my current role and my recent publications in theoretical statistical journals.  -->
+<p>I have no formal education in the mathematical sciences and have, for the most part, learned these topics by myself, and often by mistake. In trying to understand the machinery that underpins modern statistics, I found myself attempting to learn all of mathematics at once: analysis, probability, topology, measure theory, and the list goes on. Unsurprisingly, this approach was both inefficient and confusing. Over time, I realised I needed a single place to organise the ideas that recur in my work and studies. This document is that attempt: an incomplete and evolving encyclopedia of mathematical notions that I’ve found myself returning to. The focus here is on mathematical statistics, that dark crevice of mathematics too applied for the pure mathematicians, and too theoretical for the applied statisticians. The exposition is informal and unapologetically tailored to my own needs. When I include proofs, I do so with more steps and commentary than one might find in a standard textbook. Perhaps I’m slow, but the tersity of proofs confined to print media often assumes an ability greater than mine.</p>
+<p>For the moment, I have grouped these writings under the following loose banners. Mathematical statistics is messy and does not follow a linear progression, but rather is a braid of ideation. As such, certain topics are difficult to allocate, and where this is the case I have put them where I best understand them.</p>
+<ul>
+<li><strong>Analysis</strong> - The study of the machinery that makes calculus behave. Nothing statistical lives here, but the tools built in analysis quietly underpin nearly everything we do later.</li>
+<li><strong>Linear Algebra and Functional Analysis</strong> — The language of vectors and transformations at infinity. The unspoken grammar of modern statistics.</li>
+<li><strong>Measure Theory</strong> - The formal machinery for assigning ‘size’ to sets and probability to events. Often needlessly abstract, but undeniably elegant. Once you surrender to probability as a measure, you can ignore the ‘frequentist vs Bayesian’ noise.</li>
+<li><strong>Statistical Asymptotics</strong> - The study of what happens to estimators and models when the data grow without bound. A necessary fiction of rigour and delusion.</li>
+<li><strong>Weakly Dependent Processes</strong> - Time series and spatial processes that cling to independence just tightly enough to ruin your assumptions, but loosely enough to claim asymptotic validity.</li>
+</ul>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="literature.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": null,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

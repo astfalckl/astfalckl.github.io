@@ -1,0 +1,12 @@
+# Weakly Dependent Processes {#weakly}
+
+<!-- Stochastic processes: collections of random variables indexed by time or space
+Covariance and autocorrelation functions
+Mixing conditions (α-mixing, ϕ-mixing, β-mixing)
+Martingales and martingale difference sequences
+Ergodicity and stationarity
+Markov and semi-Markov processes
+Spectral representations of stationary processes
+CLTs and LLNs for dependent data
+Empirical processes and dependence-robust convergence
+Dependence in space and networks (random fields, lattice processes) -->

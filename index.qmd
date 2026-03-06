@@ -21,11 +21,9 @@ about:
 
 ## About
 
-I am a Research Fellow for the TIDE ARC ITRH in the School of Physics, Mathematics and Computing at The University of Western Australia. 
+I am a Lecturer in Statistics at the University of New South Wales, with interest in both methodological and applied research. From a methodological standpoint, I have interest in spectral analysis, complex spatio-temporal data, emulation of engineering computer models, and many aspects of uncertainty quantification. I also like water: I do lots of applied work in oceanography, glaciology and hydrodynamics.
 
-I am a research statistician with interest in both methodological and applied research. From a methodological standpoint, I have interest in spectral analysis, complex spatio-temporal data, emulation of engineering computer models, and many aspects of uncertainty quantification. I also do lots of applied work in oceanography and hydrodynamics.
-
-Previously, I was a Research Fellow in the School of Earth and Environment at the University of Leeds where I worked on uncertainty quantification in paleo-climate glaciology.
+Previously, I was a Research Fellow for the TIDE ARC ITRH in the School of Physics, Mathematics and Computing at The University of Western Australia, and a Research Fellow in the School of Earth and Environment at the University of Leeds.
 
 I have also worked in ecological restoration, materials engineering, prognostics and health management, and have consulted for the Australian Wildlife Conservancy.
 
@@ -43,5 +41,5 @@ LC Astfalck. (2025). *''Universal Modelling of Autocovariance Functions via Spli
 
 ## Contact
 
-Please contact me via email, I very seldom check any social media channels, including LinkedIn. I am accepting research students in statistics and oceanography, don't be shy in reaching out. I also have some capacity for statistical/data-science consulting or other applied research should my expertise be of interest.
+Please contact me via email, I very seldom check any social media channels, including LinkedIn. I am accepting research students in statistics and oceanography, don't be shy in reaching out.
 

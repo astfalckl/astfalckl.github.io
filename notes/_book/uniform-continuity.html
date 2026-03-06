@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Uniform Continuity | Becoming a Theory Wonk: Notes, Proofs and Pain</title>
+  <meta name="description" content="This is a" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Uniform Continuity | Becoming a Theory Wonk: Notes, Proofs and Pain" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is a" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Uniform Continuity | Becoming a Theory Wonk: Notes, Proofs and Pain" />
+  
+  <meta name="twitter:description" content="This is a" />
+  
+
+<meta name="author" content="Lachlan Astfalck" />
+
+
+<meta name="date" content="2025-10-22" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="compactness.html"/>
+<link rel="next" href="infimum-and-supremum.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<!-- macros.html -->
+<!-- v3-first config (rmarkdown/bookdown default today) -->
+<script>
+  window.MathJax = window.MathJax || {};
+  window.MathJax.tex = Object.assign({
+    packages: {'[+]': ['base', 'ams']},
+    macros: {
+      R: '{\\mathbb{R}}',
+      EE: '{\\mathbb{E}}',
+      Var: ['\\operatorname{Var}', 1],         // use as \Var{X}
+      argmin: '\\mathop{\\mathrm{arg\\,min}}',
+      argmax: '\\mathop{\\mathrm{arg\\,max}}',
+      inner: ['\\langle #1,\\, #2 \\rangle', 2] // \inner{x}{y}
+    }
+  }, window.MathJax.tex || {});
+  </script>
+  
+  <!-- Fallback for MathJax v2 (some older gitbook templates) -->
+  <script type="text/x-mathjax-config">
+  if (window.MathJax && MathJax.Hub) {
+    MathJax.Hub.Config({
+      TeX: {
+        extensions: ["AMSmath.js","AMSsymbols.js"],
+        Macros: {
+          P: "{\\mathrm{P}}",
+          E: "{\\mathbb{E}}",
+          Var: ["\\operatorname{Var}", 1],
+          argmin: "\\mathop{\\mathrm{arg\\,min}}",
+          argmax: "\\mathop{\\mathrm{arg\\,max}}",
+          inner: ["\\langle #1,\\, #2 \\rangle", 2]
+        }
+      }
+    });
+  }
+  </script>
+  
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Notes, Proofs and Pain</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overture</a></li>
+<li class="chapter" data-level="" data-path="literature.html"><a href="literature.html"><i class="fa fa-check"></i>Pro maioribus</a></li>
+<li class="chapter" data-level="1" data-path="analysis.html"><a href="analysis.html"><i class="fa fa-check"></i><b>1</b> Analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="compactness.html"><a href="compactness.html"><i class="fa fa-check"></i>Compactness</a></li>
+<li class="chapter" data-level="" data-path="uniform-continuity.html"><a href="uniform-continuity.html"><i class="fa fa-check"></i>Uniform Continuity</a></li>
+<li class="chapter" data-level="" data-path="infimum-and-supremum.html"><a href="infimum-and-supremum.html"><i class="fa fa-check"></i>Infimum and Supremum</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="linear.html"><a href="linear.html"><i class="fa fa-check"></i><b>2</b> Linear Algebra and Functional Analysis</a></li>
+<li class="chapter" data-level="3" data-path="measure.html"><a href="measure.html"><i class="fa fa-check"></i><b>3</b> Measure Theory</a></li>
+<li class="chapter" data-level="4" data-path="asymptotics.html"><a href="asymptotics.html"><i class="fa fa-check"></i><b>4</b> Asymptotic Statistics</a>
+<ul>
+<li class="chapter" data-level="" data-path="portmanteau-lemma.html"><a href="portmanteau-lemma.html"><i class="fa fa-check"></i>Portmanteau Lemma</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="weakly.html"><a href="weakly.html"><i class="fa fa-check"></i><b>5</b> Weakly Dependent Processes</a></li>
+<li class="divider"></li>
+<li><a href="https://astfalckl.github.io" target="blank">Lachlan Astfalck</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Becoming a Theory Wonk: Notes, Proofs and Pain</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="uniform-continuity" class="section level2 unnumbered hasAnchor">
+<h2>Uniform Continuity<a href="uniform-continuity.html#uniform-continuity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Let <span class="math inline">\(f : \mathbb{X} \to \mathbb{Y}\)</span> be a function between metric spaces <span class="math inline">\((\mathbb{X}, d_1)\)</span> and <span class="math inline">\((\mathbb{Y}, d_2)\)</span>, where <span class="math inline">\(d_1\)</span> and <span class="math inline">\(d_2\)</span> measure distance over the input and output spaces respectively.</p>
+<p>The function <span class="math inline">\(f\)</span> is <strong>uniformly continuous</strong> if, for every <span class="math inline">\(\epsilon &gt; 0\)</span>, there exists some <span class="math inline">\(\delta &gt; 0\)</span> such that for all <span class="math inline">\(x_1, x_2 \in \mathbb{X}\)</span>,
+<span class="math display">\[
+d_1(x_1, x_2) &lt; \delta \quad \Rightarrow \quad d_2(f(x_1), f(x_2)) &lt; \epsilon.
+\]</span></p>
+<p>I sometimes think of uniform continuity as <em>box continuity</em>: for any box of height <span class="math inline">\(\epsilon\)</span> centred at any point <span class="math inline">\(x \in \mathbb{X}\)</span>, there exists a width <span class="math inline">\(\delta\)</span> such that the graph of <span class="math inline">\(f\)</span> always exits the box through the sides, never the top. Wikipedia has a nice graphic of this.</p>
+<p><strong>Example: Portmanteau Lemma</strong></p>
+<p>Uniform continuity often appears when we want to bound terms of the form<br />
+<span class="math display">\[
+|\mathbb{E}[f(X)] - \mathbb{E}[f_\epsilon(X)]|,
+\]</span>
+where <span class="math inline">\(f_\epsilon\)</span> is a piecewise approximation of <span class="math inline">\(f\)</span>. This trick turns integrals into finite sums.</p>
+<p>For example, part of the proof of the <strong>Portmanteau Lemma</strong> relies on this kind of bound. Choose a sufficiently large compact rectangle <span class="math inline">\(I \subset \mathbb{X}\)</span> such that <span class="math inline">\(\mathrm{P}(X \notin I) &lt; \epsilon\)</span>. By uniform continuity, for any given <span class="math inline">\(\epsilon &gt; 0\)</span> there exists a <span class="math inline">\(\delta &gt; 0\)</span> such that whenever <span class="math inline">\(d_1(x_1, x_2) &lt; \delta\)</span>, we have <span class="math inline">\(|f(x_1) - f(x_2)| &lt; \epsilon\)</span>. Because this <span class="math inline">\(\delta\)</span> works uniformly across all <span class="math inline">\(x \in \mathbb{X}\)</span>, we can use compactness of <span class="math inline">\(I\)</span> to cover it with finitely many open <span class="math inline">\(\delta/2\)</span>-balls. Refining this finite cover to a disjoint collection of sets <span class="math inline">\(\{I_j\}\)</span> (for instance, by successive set subtraction) yields a <strong>finite partition</strong> of <span class="math inline">\(I\)</span> such that <span class="math inline">\(f\)</span> varies by at most <span class="math inline">\(\epsilon\)</span> on each <span class="math inline">\(I_j\)</span>. Define<br />
+<span class="math display">\[
+f_\epsilon(x) = \sum_j f(x_j) \mathbf{1}_{I_j}(x),
+\]</span>
+for any representative <span class="math inline">\(x_j \in I_j\)</span>. If <span class="math inline">\(f\)</span> is bounded by some constant <span class="math inline">\(M\)</span>, then <span class="math inline">\(|f(x) - f_\epsilon(x)| &lt; \epsilon\)</span> on <span class="math inline">\(I\)</span>, and we can bound
+<span class="math display">\[\begin{align*}
+|\mathbb{E}[f(X)] - \mathbb{E}[f_\epsilon(X)]|
+&amp;= \left| \int_{\mathbb{X}} f(x) - f_\epsilon(x) \, \mathrm{d}P(x) \right| \\
+&amp;= \left| \int_{I^c} f(x) - f_\epsilon(x) \, \mathrm{d}P(x) + \int_{I} f(x) - f_\epsilon(x) \, \mathrm{d}P(x) \right| \\
+&amp;\leq \left| \int_{I^c} f(x) - f_\epsilon(x) \, \mathrm{d}P(x)\right| + \left|\int_{I} f(x) - f_\epsilon(x) \, \mathrm{d}P(x) \right| \\
+&amp;\leq M \mathrm{P}(X \notin I) + \sum_j \int_{I_j} |f(x) - f_\epsilon(x)|\, \mathrm{d}P(x) \\
+&amp;\leq M \mathrm{P}(X \notin I) + \epsilon \sum_j \mathrm{P}(X \in I_j) \\
+&amp;\leq (M+1)\epsilon.
+\end{align*}\]</span></p>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="compactness.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="infimum-and-supremum.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": null,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/rstudio/bookdown-demo/edit/master/02_analysis.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

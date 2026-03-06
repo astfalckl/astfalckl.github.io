@@ -35,9 +35,9 @@ LC Astfalck, DB Williamson, N Gandy, LJ Gregoire, and RF Ivanovic. (2024). *''Co
 
 LC Astfalck, AM Sykulski, and EJ Cripps. (2025). *''Bias Correction of Quadratic Spectral Estimators''*, **Biometrika**. asaf033. [[Available here.]](https://academic.oup.com/biomet/advance-article/doi/10.1093/biomet/asaf033/8121249)
 
-LC Astfalck, D Sen, S Patra, EJ Cripps and DB Dunson. (2025). *''Posterior Projection for Inference in Constrained Spaces''*. Submitted to the **SIAM/ASA Journal on Uncertainty Quantification**. [[Available here.]](https://arxiv.org/abs/1812.05741)
+R Ou, LC Astfalck, D Sen, DB Dunson. (2026). *'Scalable Bayesian inference for time series via divide-and-conquer'*, **Accepted (minor revisions) in Journal of the American Statistical Association** [[Available here.]](https://arxiv.org/pdf/2106.11043)
 
-LC Astfalck. (2025). *''Universal Modelling of Autocovariance Functions via Spline Kernels''*, Submitted to the **Journal of the Royal Statistical Society: Series B**. [[Available here.]](https://arxiv.org/abs/2506.21953)
+LC Astfalck, D Sen, S Patra, EJ Cripps and DB Dunson. (2025). *''Posterior Projection for Inference in Constrained Spaces''*. Submitted to the **SIAM/ASA Journal on Uncertainty Quantification**. [[Available here.]](https://arxiv.org/abs/1812.05741)
 
 ## Contact
 

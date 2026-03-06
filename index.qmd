@@ -10,7 +10,7 @@ about:
       href: https://github.com/astfalckl
     - icon: envelope
       text: Email
-      href: mailto:lachlan.astfalck@uwa.edu.au
+      href: mailto:l.astfalck@unsw.edu.au
     - icon: mortarboard
       text: Scholar
       href: https://scholar.google.com/citations?user=duQ38MgAAAAJ&hl=en&oi=ao

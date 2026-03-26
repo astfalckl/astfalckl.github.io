@@ -1,0 +1,16 @@
+---
+title: "The Fast and the Fourierous"
+subtitle: "Invited Talk to the Australian Statistical Conference"
+date: "2025-12-03"
+# description: ""
+image: image.jpg
+---
+
+### Abstract
+
+Flexible modelling of the autocovariance function (ACF) is central to time-series, spatial, and spatio-temporal analysis. Modern applications often demand flexibility beyond classical parametric models, motivating non-parametric descriptions of the ACF. Bochner’s Theorem guarantees that any positive spectral measure yields a valid ACF via the inverse Fourier transform; however, existing non-parametric approaches in the spectral domain rarely return closed-form expressions for the ACF itself. We develop a flexible, closed-form class of non-parametric ACFs by deriving the inverse Fourier transform of B-spline spectral bases with arbitrary degree and knot placement. This yields a general class of ACF with three key features: (i) it is provably dense,
+under an $\mathcal{L}_1$ metric, in the space of weakly stationary, mean-square continuous ACFs with mild regularity conditions; (ii) it accommodates univariate, multivariate, and multidimensional processes; and (iii) it naturally supports non-separable structure without requiring explicit imposition.
+
+### Links
+
+[[pdf]](asc_fast_fourierous.pdf)

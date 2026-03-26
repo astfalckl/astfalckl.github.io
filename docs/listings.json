@@ -8,6 +8,7 @@
   {
     "listing": "/presentations.html",
     "items": [
+      "/presentations/20251203_fast_fourier/index.html",
       "/presentations/20240912_gp_summer_school/index.html",
       "/presentations/20240828_bayeslinear_exeter/index.html",
       "/presentations/20240701_intro_to_ml/index.html",

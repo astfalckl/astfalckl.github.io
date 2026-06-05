@@ -1,0 +1,264 @@
+/*-- scss:defaults --*/
+
+// ============================================================================
+// Astfalck Design System — "Stream" palette.
+// Tokens from ../astfalck-design-system/colors_and_type.css
+// ============================================================================
+
+$paper:           #F8F7F3;
+$paper-sunk:      #EEEBE3;
+$ink:             #211C16;
+$ink-2:           #4A4239;
+$ink-3:           #8A8073;
+$sage:            #5A7468;
+$sage-deep:       #41564C;
+$sage-wash:       #E7EAE5;
+$terracotta:      #9D5242;
+$terracotta-deep: #6B3828;
+$yellow:          #FFDC00;
+
+// ---- Bootstrap mapping ----
+$body-bg:                $paper;
+$body-color:             $ink;
+$link-color:             $sage-deep;
+$link-decoration:        none;
+$link-hover-color:       $terracotta;
+$font-family-sans-serif: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
+$font-family-monospace:  "Roboto Mono", ui-monospace, "SF Mono", Menlo, monospace;
+$headings-font-family:   "Clancy", "Roboto", sans-serif;
+$headings-font-weight:   600;
+$font-size-root:         18px;
+$line-height-base:       1.65;
+$code-bg:                $paper-sunk;
+$code-color:             $ink;
+$border-radius:          4px;
+$navbar-bg:              rgba($paper, 0.86);
+$navbar-fg:              $ink;
+$footer-bg:              $paper;
+
+/*-- scss:rules --*/
+
+:root {
+  --paper:      #{$paper};
+  --paper-sunk: #{$paper-sunk};
+  --ink:        #{$ink};
+  --ink-2:      #{$ink-2};
+  --ink-3:      #{$ink-3};
+  --line:       rgba(33, 28, 22, 0.12);
+  --sage:       #{$sage};
+  --sage-deep:  #{$sage-deep};
+  --sage-wash:  #{$sage-wash};
+  --terracotta: #{$terracotta};
+  --yellow:     #{$yellow};
+  --font-display: "Clancy", "Roboto", sans-serif;
+  --font-mono: "Roboto Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --dur: 200ms;
+  --ease: cubic-bezier(0.2, 0, 0.1, 1);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---- Links: sage, terracotta on hover, quiet underline ---- */
+main a:not(.ftlink) {
+  border-bottom: 1px solid rgba(65, 86, 76, 0.35);
+  transition: color var(--dur) var(--ease), border-color var(--dur) var(--ease);
+}
+main a:not(.ftlink):hover {
+  border-bottom-color: rgba(157, 82, 66, 0.6);
+}
+
+/* ---- Header / nav: sticky paper scrim, wordmark, terracotta active rule ---- */
+.navbar {
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.navbar-title {
+  font-family: var(--font-display);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.navbar .nav-link {
+  font-size: 15px;
+  color: var(--ink-3);
+  transition: color var(--dur) var(--ease);
+}
+.navbar .nav-link:hover { color: var(--ink); }
+.navbar .nav-link.active {
+  color: var(--ink);
+  box-shadow: inset 0 -2px 0 var(--terracotta);
+}
+
+/* ---- Headings: Clancy, sentence case, short ink rule (section-head motif) ---- */
+h1, h2 { letter-spacing: -0.02em; }
+#title-block-header { margin-block-end: 2.2rem; }
+#title-block-header .title { font-size: 2.1rem; }
+#title-block-header .title::after,
+main h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--ink);
+  margin-top: 13px;
+}
+main h2 {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-top: 3rem;
+}
+
+/* ---- Kicker: mono uppercase terracotta label ---- */
+.kicker {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin: 0 0 8px;
+}
+
+/* ---- Marker-pen highlight (the yellow whisper — use at most once per page) ---- */
+mark, .mark {
+  background: linear-gradient(180deg, transparent 58%, var(--yellow) 58%, var(--yellow) 92%, transparent 92%);
+  color: inherit;
+  padding: 0 0.05em;
+}
+
+/* ---- Hero (home) ---- */
+.hero {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 24px 0 40px;
+}
+.hero-text { flex: 1; }
+.hero-name {
+  font-family: var(--font-display);
+  font-size: 46px;
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 6px 0 14px;
+}
+.hero-role {
+  font-size: 20px;
+  line-height: 1.45;
+  color: var(--ink-2);
+  max-width: 30ch;
+  margin: 0 0 22px;
+}
+.hero-social { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+.hero-photo {
+  flex: none;
+  width: 200px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* ---- Icon links (hero social) ---- */
+.ftlink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--ink-2);
+  transition: color var(--dur) var(--ease);
+}
+.ftlink:hover { color: var(--terracotta); }
+.ftlink svg { width: 15px; height: 15px; }
+
+/* ---- Reference lists (publications, selected research) ---- */
+.pubs h3 {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin: 2.4rem 0 1rem;
+}
+.pubs p {
+  font-size: 15px;
+  line-height: 1.58;
+  color: var(--ink-2);
+  padding-left: 1.1em;
+  text-indent: -1.1em;
+  max-width: 62ch;
+  margin-bottom: 14px;
+}
+.pubs strong { font-weight: 500; color: var(--ink); }
+.pubs em { color: var(--ink); }
+.pubs p a {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+/* ---- Software: hairline-divided package rows ---- */
+.pkg {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+.pkg:last-child { border-bottom: none; }
+.pkg-body { flex: 1; }
+.pkg-body h3 {
+  font-family: var(--font-mono);
+  font-size: 17px;
+  font-weight: 500;
+  margin: 0 0 6px;
+}
+.pkg-body p {
+  font-size: 15px;
+  color: var(--ink-2);
+  max-width: 60ch;
+  margin: 0;
+}
+.pkg-logo { flex: none; }
+.pkg-logo p { margin: 0; }
+.pkg-logo img { width: 96px; border-radius: 4px; }
+
+/* ---- Presentations listing (Quarto .quarto-post markup) ---- */
+div.quarto-post {
+  border-bottom: 1px solid var(--line);
+  padding: 20px 0;
+  gap: 24px;
+}
+div.quarto-post .body h3.listing-title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 4px;
+}
+div.quarto-post .body .listing-subtitle { font-size: 14px; color: var(--ink-2); }
+div.quarto-post .metadata {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-3);
+}
+div.quarto-post .thumbnail img { border-radius: 4px; }
+
+/* ---- Footer ---- */
+.nav-footer {
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  color: var(--ink-3);
+}
+
+/* ---- Responsive / motion ---- */
+@media (max-width: 640px) {
+  .hero { flex-direction: column-reverse; gap: 24px; }
+  .hero-name { font-size: 40px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}

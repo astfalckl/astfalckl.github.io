@@ -2,8 +2,8 @@ project:
   type: website
   resources:
     - astfalck_cv.pdf
+    - "fonts/"
   output-dir: docs
-
 
 website:
   title: "Lachlan Astfalck"
@@ -20,19 +20,14 @@ website:
         href: software.qmd
       - text: "Presentations"
         href: presentations.qmd
-      # - text: "Writing"
-      #   href: writing.qmd
-
   page-footer:
-    left: "© Copyright 2025 Lachlan Astfalck. Unless stated otherwise, all text and images licensed CC-BY-NC 4.0."
+    left: "© 2026 Lachlan Astfalck. Unless stated otherwise, all text and images licensed CC-BY-NC 4.0."
 
 format:
   html:
-    theme: sandstone
-    css: styles.css
+    theme: astfalck.scss
+    css: fonts.css
     toc: false
+    anchor-sections: false
     grid:
-      body-width: 1200px
-
-
-
+      body-width: 720px

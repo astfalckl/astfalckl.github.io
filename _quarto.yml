@@ -3,6 +3,12 @@ project:
   resources:
     - astfalck_cv.pdf
     - "fonts/"
+    # Static snapshots of retired sub-sites — copied through to docs/ on every
+    # render so live URLs (/notes/, /writing*) keep working. Sources archived
+    # in ~/Documents/Admin/website_archive/.
+    - "notes/"
+    - "writing/"
+    - writing.html
   output-dir: docs
 
 website:

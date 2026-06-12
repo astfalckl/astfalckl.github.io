@@ -62,11 +62,11 @@ body {
 }
 
 /* ---- Links: sage, terracotta on hover, quiet underline ---- */
-main a:not(.ftlink) {
+main a:not(.ftlink):not(.btn-text) {
   border-bottom: 1px solid rgba(65, 86, 76, 0.35);
   transition: color var(--dur) var(--ease), border-color var(--dur) var(--ease);
 }
-main a:not(.ftlink):hover {
+main a:not(.ftlink):not(.btn-text):hover {
   border-bottom-color: rgba(157, 82, 66, 0.6);
 }
 
@@ -174,6 +174,20 @@ mark, .mark {
 .ftlink:hover { color: var(--terracotta); }
 .ftlink svg { width: 15px; height: 15px; }
 
+/* ---- Text button: "All publications ->" (from design system) ---- */
+.btn-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--sage-deep);
+  margin-top: 18px;
+  transition: color var(--dur) var(--ease);
+}
+.btn-text:hover { color: var(--terracotta); }
+.btn-text svg { width: 15px; height: 15px; stroke-width: 2; }
+
 /* ---- Reference lists (publications, selected research) ---- */
 .pubs h3 {
   font-family: var(--font-mono);
@@ -199,6 +213,28 @@ mark, .mark {
   font-size: 12px;
   white-space: nowrap;
 }
+
+/* ---- Reflist (design-spec publications layout: year gutter + refs) ---- */
+.reflist { display: flex; flex-direction: column; gap: 16px; }
+.ref { display: grid; grid-template-columns: 44px 1fr; gap: 16px; font-size: 15px; line-height: 1.58; }
+.ref__yr { font-family: var(--font-mono); font-size: 12px; color: var(--ink-3); padding-top: 2px; }
+.ref__txt { color: var(--ink-2); text-indent: -1.1em; padding-left: 1.1em; max-width: 93ch; }
+.ref__txt .me { color: var(--ink); font-weight: 500; }
+.ref__txt .ti { color: var(--ink); }
+.ref__txt .ve { font-style: italic; }
+.ref__links { white-space: nowrap; }
+.reflist .ref__txt .ref__links a {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--sage-deep);
+  border-bottom: 1px solid color-mix(in srgb, var(--sage-deep) 28%, transparent);
+  margin-left: 8px;
+}
+.reflist .ref__txt .ref__links a:hover {
+  color: var(--terracotta);
+  border-bottom-color: color-mix(in srgb, var(--terracotta) 50%, transparent);
+}
+.page__note { font-size: 14px; color: var(--ink-3); margin-top: 24px; max-width: 60ch; }
 
 /* ---- Software: hairline-divided package rows ---- */
 .pkg {

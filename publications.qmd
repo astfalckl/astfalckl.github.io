@@ -9,6 +9,8 @@ format:
 ```{=html}
 <div class="reflist">
 
+  <div class="ref"><span class="ref__yr">2026</span><div class="ref__txt">L Sharrock, <span class="me">LC Astfalck</span> and HB Moss (2026). <span class="ti">LatentFlow: A General Framework for Conditioning Stochastic Processes.</span> Submitted to <span class="ve">ICLR 2027</span>.<span class="ref__links"><a href="https://arxiv.org/abs/2607.12922">preprint</a></span></div></div>
+
   <div class="ref"><span class="ref__yr">2026</span><div class="ref__txt">HB Moss, <span class="me">LC Astfalck</span>, T Cowperthwaite, C Doumont, S Willis, P Hennig et al. (2026). <span class="ti">Conditioning Gaussian Processes on Almost Anything.</span> Submitted to <span class="ve">NeurIPS 2026</span>.<span class="ref__links"><a href="https://arxiv.org/abs/2605.21041">preprint</a></span></div></div>
 
   <div class="ref"><span class="ref__yr">2026</span><div class="ref__txt">R Ou, <span class="me">LC Astfalck</span>, D Sen and DB Dunson (2026). <span class="ti">Scalable Bayesian inference for time series via divide-and-conquer.</span> <span class="ve">Journal of the American Statistical Association</span>, accepted, in press.<span class="ref__links"><a href="https://arxiv.org/pdf/2106.11043">preprint</a></span></div></div>
@@ -19,9 +21,9 @@ format:
 
   <div class="ref"><span class="ref__yr">2026</span><div class="ref__txt"><span class="me">LC Astfalck</span>, D Sen, S Patra, EJ Cripps and DB Dunson (2026). <span class="ti">Posterior Projection for Inference in Constrained Spaces.</span> Submitted to <span class="ve">SIAM/ASA Journal on Uncertainty Quantification</span>.<span class="ref__links"><a href="https://arxiv.org/abs/1812.05741">preprint</a></span></div></div>
 
-  <div class="ref"><span class="ref__yr">2026</span><div class="ref__txt">T Tang, <span class="me">LC Astfalck</span> and DB Dunson (2026). <span class="ti">Efficient Bayesian Inference for Discretely Observed Continuous Time Markov Chains.</span> Submitted to <span class="ve">Biometrika</span>.<span class="ref__links"><a href="https://arxiv.org/abs/2507.16756">preprint</a></span></div></div>
+  <div class="ref"><span class="ref__yr">2026</span><div class="ref__txt">T Tang, <span class="me">LC Astfalck</span> and DB Dunson (2026). <span class="ti">Efficient Bayesian Inference for Discretely Observed Continuous Time Markov Chains.</span> Submitted to <span class="ve">Journal of Computational and Graphical Statistics</span>.<span class="ref__links"><a href="https://arxiv.org/abs/2507.16756">preprint</a></span></div></div>
 
-  <div class="ref"><span class="ref__yr">2026</span><div class="ref__txt">IA Milne, <span class="me">LC Astfalck</span>, M Zed, J Lee-Kopij and EJ Cripps (2026). <span class="ti">Hybrid physics-data driven spectral forecasts of semisubmersible response.</span> Submitted to <span class="ve">Ocean Engineering</span>.<span class="ref__links"><a href="https://arxiv.org/abs/2603.26026">preprint</a></span></div></div>
+  <div class="ref"><span class="ref__yr">2026</span><div class="ref__txt">IA Milne, <span class="me">LC Astfalck</span>, M Zed, J Lee-Kopij and EJ Cripps (2026). <span class="ti">Hybrid physics-data driven spectral forecasts of semisubmersible response.</span> <span class="ve">Ocean Engineering</span>, 363, 126549.<span class="ref__links"><a href="https://www.sciencedirect.com/science/article/pii/S0029801826023838">paper</a></span></div></div>
 
   <div class="ref"><span class="ref__yr">2026</span><div class="ref__txt"><span class="me">LC Astfalck</span> (2026). <span class="ti">Universal approximation of auto-covariance functions via spline kernels.</span> Submitted to <span class="ve">Spatial Statistics</span>.<span class="ref__links"><a href="https://arxiv.org/abs/2506.21953">preprint</a></span></div></div>
 

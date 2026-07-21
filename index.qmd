@@ -56,9 +56,9 @@ for Spectral Density Estimation'. *Biometrika*, 111(4), 1313–1329.
 [paper](https://academic.oup.com/biomet/article/111/4/1313/7703280)
 
 R Ou, **LC Astfalck**, D Sen and DB Dunson (2026). 'Scalable Bayesian
-inference for time series via divide-and-conquer'. Accepted (2026), in press,
-*Journal of the American Statistical Association*.
-[preprint](https://arxiv.org/pdf/2106.11043)
+inference for time series via divide-and-conquer'.
+*Journal of the American Statistical Association*, 1–25.
+[paper](https://www.tandfonline.com/doi/full/10.1080/01621459.2026.2688950)
 :::
 
 ```{=html}

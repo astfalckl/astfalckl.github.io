@@ -13,7 +13,7 @@ format:
 
   <div class="ref"><span class="ref__yr">2026</span><div class="ref__txt">HB Moss, <span class="me">LC Astfalck</span>, T Cowperthwaite, C Doumont, S Willis, P Hennig et al. (2026). <span class="ti">Conditioning Gaussian Processes on Almost Anything.</span> Submitted to <span class="ve">NeurIPS 2026</span>.<span class="ref__links"><a href="https://arxiv.org/abs/2605.21041">preprint</a></span></div></div>
 
-  <div class="ref"><span class="ref__yr">2026</span><div class="ref__txt">R Ou, <span class="me">LC Astfalck</span>, D Sen and DB Dunson (2026). <span class="ti">Scalable Bayesian inference for time series via divide-and-conquer.</span> <span class="ve">Journal of the American Statistical Association</span>, accepted, in press.<span class="ref__links"><a href="https://arxiv.org/pdf/2106.11043">preprint</a></span></div></div>
+  <div class="ref"><span class="ref__yr">2026</span><div class="ref__txt">R Ou, <span class="me">LC Astfalck</span>, D Sen and DB Dunson (2026). <span class="ti">Scalable Bayesian inference for time series via divide-and-conquer.</span> <span class="ve">Journal of the American Statistical Association</span>, 1–25.<span class="ref__links"><a href="https://www.tandfonline.com/doi/full/10.1080/01621459.2026.2688950">paper</a></span></div></div>
 
   <div class="ref"><span class="ref__yr">2026</span><div class="ref__txt">Y Zheng, MD Rayson, NL Jones and <span class="me">LC Astfalck</span> (2026). <span class="ti">A machine learning parameterization for the internal gravity wave spectrum.</span> <span class="ve">Journal of Geophysical Research: Oceans</span>, 131(5), e2025JC023028.<span class="ref__links"><a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2025JC023028">paper</a></span></div></div>
 

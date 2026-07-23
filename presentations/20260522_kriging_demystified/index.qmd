@@ -1,9 +1,9 @@
 ---
 title: "Kriging Demystified"
-subtitle: "Spatial prediction without the mystery"
+subtitle: "Invited talk at StatFest, UNSW"
 date: "2026-05-22"
 # description: ""
-image: witwatersrand.jpg
+image: mining-sunset.png
 resources:
   - "kriging-demystified.html"
   - "kriging-demystified_files/"
@@ -16,7 +16,7 @@ resources:
 
 ### Abstract
 
-A rebuilt version of my kriging workshop, given at UNSW for STREAM. Starting from the Witwatersrand goldfields, where the method began, it works through what kriging is, how it works, and what to think about when using it. Written for applied scientists rather than statisticians.
+A rebuilt version of my kriging workshop, given at StatFest at UNSW. Starting from the Witwatersrand goldfields, where the method began, it works through what kriging is, how it works, and what to think about when using it. Written for applied scientists rather than statisticians.
 
 ### Links
 

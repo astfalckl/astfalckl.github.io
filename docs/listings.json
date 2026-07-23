@@ -2,6 +2,7 @@
   {
     "listing": "/presentations.html",
     "items": [
+      "/presentations/20260522_kriging_demystified/index.html",
       "/presentations/20251203_fast_fourier/index.html",
       "/presentations/20240912_gp_summer_school/index.html",
       "/presentations/20240828_bayeslinear_exeter/index.html",

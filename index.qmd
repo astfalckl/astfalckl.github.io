@@ -26,7 +26,7 @@ pagetitle: "Lachlan Astfalck"
       -->
     </div>
   </div>
-  <img class="hero-photo" src="images/headshot.jpg" alt="Lachlan Astfalck" />
+  <img class="hero-photo" src="images/headshot2.jpg" alt="Lachlan Astfalck" />
 </section>
 ```
 

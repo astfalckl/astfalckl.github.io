@@ -8,8 +8,8 @@ resources:
   - "conditioning-stochastic-processes.html"
   - "conditioning-stochastic-processes_files/"
   - "images/"
+  - "logos/"
   - "stream_logo_notext.png"
-  - "unsw_logo.png"
 ---
 
 ### Abstract
@@ -18,4 +18,4 @@ Sampling from a stochastic process only requires running it forward; outside a s
 
 ### Links
 
-[[slides]](conditioning-stochastic-processes.html) — password protected; ask me for the password.
+[[slides]](conditioning-stochastic-processes.html)

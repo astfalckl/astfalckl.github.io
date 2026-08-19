@@ -7,6 +7,8 @@ image: images/website-tile.png
 resources:
   - "conditioning-stochastic-processes.html"
   - "conditioning-stochastic-processes_files/"
+  - "conditioning-earth-system-15min.html"
+  - "conditioning-earth-system-15min_files/"
   - "images/"
   - "logos/"
   - "stream_logo_notext.png"
@@ -18,4 +20,4 @@ Sampling from a stochastic process only requires running it forward; outside a s
 
 ### Links
 
-[[slides]](conditioning-stochastic-processes.html)
+[[slides]](conditioning-stochastic-processes.html) [[15 minute version]](conditioning-earth-system-15min.html)

@@ -9,6 +9,9 @@ resources:
   - "conditioning-stochastic-processes_files/"
   - "conditioning-earth-system-15min.html"
   - "conditioning-earth-system-15min_files/"
+  - "assimilating-almost-anything.html"
+  - "assimilating-almost-anything_files/"
+  - "libs/"
   - "images/"
   - "logos/"
   - "stream_logo_notext.png"
@@ -20,4 +23,4 @@ Sampling from a stochastic process only requires running it forward; outside a s
 
 ### Links
 
-[[slides]](conditioning-stochastic-processes.html) [[15 minute version]](conditioning-earth-system-15min.html)
+[[slides]](conditioning-stochastic-processes.html) [[15 minute version]](conditioning-earth-system-15min.html) [[CCRC Presentation]](assimilating-almost-anything.html)

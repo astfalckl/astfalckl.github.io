@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="assimilating-almost-anything_files/libs/clipboard/clipboard.min.js"></script>
+<script src="assimilating-almost-anything_files/libs/quarto-html/tabby.min.js"></script>
+<script src="assimilating-almost-anything_files/libs/quarto-html/popper.min.js"></script>
+<script src="assimilating-almost-anything_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="assimilating-almost-anything_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="assimilating-almost-anything_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="assimilating-almost-anything_files/libs/quarto-html/quarto-syntax-highlighting-4928aee9384e66cb359dd8efc1d1e04a.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.29">
+
+  <meta name="author" content="Lachlan Astfalck">
+  <title>Assimilating Almost Anything into Almost Any Stochastic Model</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="assimilating-almost-anything_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="assimilating-almost-anything_files/libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="assimilating-almost-anything_files/libs/revealjs/dist/theme/quarto-8fbdb11eea67717cbbf396c1f0ab6211.css">
+  <link href="assimilating-almost-anything_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="assimilating-almost-anything_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="assimilating-almost-anything_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="assimilating-almost-anything_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <style>
+  /* Placeholder for a figure that has not been generated yet. Sage rule and terracotta
+     kicker follow the house palette (see Gary/assets/design-system/colors_and_type.css);
+     nothing here touches the deck theme. */
+  .reveal .fig-todo {
+    border: 3px dashed #5A7468;
+    background: rgba(90, 116, 104, 0.05);
+    border-radius: 4px;
+    padding: 1.0em 1.4em;
+    margin: 0.5em auto;
+    max-width: 82%;
+    min-height: 4.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #211C16;
+  }
+  .reveal .fig-todo .kicker {
+    display: block;
+    font-family: "Roboto Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+    font-size: 0.40em;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #9D5242;
+    margin-bottom: 0.45em;
+  }
+  .reveal .fig-todo .what {
+    display: block;
+    font-size: 0.60em;
+    line-height: 1.35;
+  }
+  /* Small caption sitting under a video or a figure. */
+  .reveal .panel-caption {
+    font-size: 0.45em;
+    color: #55504A;
+    text-align: center;
+    line-height: 1.3;
+    max-width: 24em;
+    margin: 0.3em auto 0 auto;
+  }
+  /* The family-tree table wants to be readable, not loud. */
+  .reveal .family-tree table {
+    font-size: 0.72em;
+  }
+  </style>
+  <style>.reveal .footer { display: none !important; }</style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Assimilating <em>Almost Anything</em> into <em>Almost Any Stochastic Model</em></h1>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Lachlan Astfalck 
+</div>
+        <p class="quarto-title-affiliation">
+            UNSW Sydney | STREAM
+          </p>
+    </div>
+</div>
+
+</section>
+<section class="slide level2">
+
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/sandbox.png" class="quarto-figure quarto-figure-center" width="1800"></p>
+</figure>
+</div>
+</section>
+<section id="what-are-we-trying-to-do" class="slide level2">
+<h2>What are we trying to do?</h2>
+<p><br></p>
+<ul>
+<li>Take a <strong>stochastic</strong> model you can run forward: a solver, a stochastic parameterisation, a field simulator. Call it a stochastic process <span class="math inline">\(f\)</span>.</li>
+<li>We want runs that <strong>assimilate</strong>/agree with some information <span class="math inline">\(\mathcal{C}\)</span>:
+<ul>
+<li>sparse, indirect, bounded-below observations — gauges, satellite retrievals, floats;</li>
+<li>a budget or a boundary condition the analysis has to respect;</li>
+<li>an event we want to impose — a heatwave of a given severity, a surge above a given level.</li>
+</ul></li>
+<li><strong>Working assumption</strong>: running the unconditional model forward is easy, steering/conditioning is hard.</li>
+</ul>
+<p><br></p>
+<div class="highlight-box">
+<p><strong>We are targeting the quantity <span class="math inline">\(p(f \mid \mathcal{C})\)</span>.</strong></p>
+</div>
+</section>
+<section id="some-nomenclature" class="slide level2">
+<h2>Some Nomenclature</h2>
+<p><br></p>
+<ul>
+<li><strong>Field</strong> - some general notion of a latent/unobserved/incomplete physical process</li>
+<li><strong>Assimilation</strong> - incorporating information into your field</li>
+<li><strong>Model</strong> - some structured belief on your field (not necessarily a numerical model)</li>
+<li><strong>Stochastic Model</strong> - any structured belief with some formal mechanism that may be perturbed</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/nonlinear.png" class="quarto-figure quarto-figure-center" width="1800"></p>
+</figure>
+</div>
+</section>
+<section id="data-assimilation-the-noun" class="slide level2">
+<h2>Data Assimilation (the noun)</h2>
+<p><br></p>
+<div class="family-tree">
+<table class="caption-top">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 27%">
+<col style="width: 27%">
+<col style="width: 27%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>prior</th>
+<th>observation model</th>
+<th>what you get</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>OI / 3D-Var</td>
+<td>Gaussian, static <span class="math inline">\(\mathbf{B}\)</span></td>
+<td>linear <span class="math inline">\(H\)</span>, Gaussian</td>
+<td>a mean and a covariance</td>
+</tr>
+<tr class="even">
+<td>4D-Var</td>
+<td>Gaussian, model as strong constraint</td>
+<td>linearised <span class="math inline">\(H\)</span>, Gaussian</td>
+<td>the mode, via the adjoint</td>
+</tr>
+<tr class="odd">
+<td>EnKF</td>
+<td>an ensemble, Gaussian in the update</td>
+<td>linear update</td>
+<td>a shifted ensemble</td>
+</tr>
+<tr class="even">
+<td><strong>this talk</strong></td>
+<td><strong>your model <span class="math inline">\(f\)</span></strong></td>
+<td><strong>almost anything</strong></td>
+<td><strong>draws from the true posterior</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><br></p>
+</section>
+<section>
+<section id="all-cats-are-stochastic-processes" class="title-slide slide level1 center" data-background-color="#FFDC00">
+<h1>All Cats Are Stochastic Processes</h1>
+
+</section>
+<section id="a-cat-is-a-random-vector" class="slide level2">
+<h2>A cat is a random vector</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/p-cats_annotated.png" class="quarto-figure quarto-figure-center" width="1400"></p>
+</figure>
+</div>
+<p><strong>Diffusion modelling simply asks <em>“how do I sample from an inconvenient distribution?”</em></strong></p>
+</section>
+<section id="noising-a-cat" class="slide level2">
+<h2>Noising a cat</h2>
+<p><br> <br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/cat_noised_annotated_ccrc.png" class="quarto-figure quarto-figure-center" width="2000"></p>
+</figure>
+</div>
+</section>
+<section id="reversing-a-cat" class="slide level2">
+<h2>Reversing a cat</h2>
+<!-- - The noising path is the marginal law of an SDE run forward. -->
+<ul>
+<li>Write <span class="math inline">\(p_t\)</span> for the marginal of <span class="math inline">\(\boldsymbol{f}_t\)</span> — the law of the process after noising for time <span class="math inline">\(t\)</span>
+<ul>
+<li>(so <span class="math inline">\(p_0 = p_\text{cat} = \mathcal{SP}\)</span>, <span class="math inline">\(p_1 \approx \mathcal{N}(\boldsymbol{0}, \mathbf{I})\)</span>)</li>
+</ul></li>
+<li>Anderson (1982) showed that the time reversal is also an SDE,
+<span class="math display">\[\begin{aligned}
+\text{Forwards:}&amp; \qquad \mathrm{d}\boldsymbol{f}_t = - \tfrac{1}{2}\beta(t) \boldsymbol{f}_t \mathrm{d}t + \sqrt{\beta(t)}\,\mathrm{d}\boldsymbol{W}_t. \\
+\text{Backwards:}&amp; \qquad \mathrm{d}\boldsymbol{f}_t = \beta(t)\left[\tfrac{1}{2}\boldsymbol{f}_t - \nabla_{\boldsymbol{f}}\log p_t(\boldsymbol{f}_t)\right]\mathrm{d}t + \sqrt{\beta(t)}\,\mathrm{d}\bar{\boldsymbol{W}}_t.
+\end{aligned}\]</span></li>
+<li>One unknown object: the <strong>time-dependent score</strong> <span class="math inline">\(\nabla_{\boldsymbol{f}} \log p_t\)</span>.</li>
+<li>If we know the score, noise flows backwards into cats.</li>
+</ul>
+<div class="slide-cite">
+<p>Anderson (1982), <em>Reverse-time diffusion equation models</em>, Stochastic Processes and their Applications 12(3):313–326.</p>
+</div>
+</section>
+<section id="reversing-a-cat-1" class="slide level2">
+<h2>Reversing a cat</h2>
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/cat_restored_annotated_ccrc.png" class="quarto-figure quarto-figure-center" width="2000"></p>
+</figure>
+</div>
+</section>
+<section id="googles-gencast" class="slide level2">
+<h2>Google’s GenCast</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/gencast.jpg" class="quarto-figure quarto-figure-center" width="750"></p>
+</figure>
+</div>
+<div class="slide-cite">
+<p>Price, Ilan, et al.&nbsp;(2025), <em>Probabilistic weather forecasting with machine learning.</em>, Nature 637(8044): 84-90.</p>
+</div>
+</section>
+<section id="what-does-machine-learning-do" class="slide level2">
+<h2>What does machine learning do?</h2>
+<p><br></p>
+<ul>
+<li>For cats, <span class="math inline">\(\nabla_\boldsymbol{f} \log p_t\)</span> is unknown. Diffusion models <strong>learn</strong> it by fitting a network <span class="math inline">\(s_\theta(\boldsymbol{f}, t)\)</span>.</li>
+<li>That is the entire “ML” content of a diffusion model; everything else is stochastic calculus.
+<ul>
+<li>find a few hundred million photographs of cats;</li>
+<li>noise every one of them along the forward process;</li>
+<li>train <span class="math inline">\(s_\theta(\boldsymbol{f}, t) \approx \nabla_\boldsymbol{f} \log p_t\)</span> on the pairs;</li>
+<li>sample from <span class="math inline">\(p_\text{cats}\)</span> by pushing white noise through the reverse SDE.</li>
+</ul></li>
+</ul>
+<p><br></p>
+<!-- ::: {.highlight-box}
+**The neural network exists only because nobody can write down the score of the distribution over cat photographs.**
+::: -->
+</section>
+<section id="conditional-cats" class="slide level2">
+<h2>Conditional cats</h2>
+<p><br></p>
+<ul>
+<li>Want a <em>grumpy</em> cat? Bayes: <span class="math display">\[
+\nabla \log p_t(\boldsymbol{f}_t \mid \mathcal{C} = \text{grumpy}) = \nabla \log p_t(\boldsymbol{f}_t) + \underbrace{\nabla \log p_t(\mathcal{C} = \text{grumpy} \mid \boldsymbol{f}_t)}_{\text{the pull towards } \mathcal{C}}.
+\]</span></li>
+<li>Add a likelihood term to the drift and the trajectory bends towards draws satisfying <span class="math inline">\(\mathcal{C}\)</span>: <span class="math display">\[\mathrm{d}\boldsymbol{f}_t = \beta(t)\left[\tfrac{1}{2}\boldsymbol{f}_t - \nabla_{\boldsymbol{f}}\log p_t(\boldsymbol{f}_t \mid \mathcal{C})\right]\mathrm{d}t + \sqrt{\beta(t)}\,\mathrm{d}\bar{\boldsymbol{W}}_t.\]</span></li>
+<li>Machine learning calls this <strong>guidance</strong>. It is Bayes’ rule added to a drift.</li>
+</ul>
+</section>
+<section id="conditional-cats-1" class="slide level2">
+<h2>Conditional cats</h2>
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/conditional_cat_annotated.png" class="quarto-figure quarto-figure-center" width="2000"></p>
+</figure>
+</div>
+</section></section>
+<section>
+<section id="your-model-is-a-boring-cat" class="title-slide slide level1 center" data-background-color="#FFDC00">
+<h1>Your Model Is A Boring Cat</h1>
+
+</section>
+<section id="gaussian-processes-kriging-oi" class="slide level2">
+<h2>Gaussian Processes / Kriging / OI</h2>
+<ul>
+<li>A Gaussian process is a distribution over fields: any finite set of locations has a joint normal distribution with covariance <span class="math inline">\(k(x,x')\)</span>.</li>
+<li>With linear Gaussian observations <span class="math inline">\(\boldsymbol{y} = \mathbf{L}\boldsymbol{f}_0 + \boldsymbol{\varepsilon}\)</span>, the posterior mean is closed form, <span class="math display">\[
+\mathbf{m}_{*|\boldsymbol{y}} = \mathbf{m}_* + \mathbf{K}_{**}\mathbf{L}^{\mathsf{T}}\!\left(\mathbf{L}\mathbf{K}_{**}\mathbf{L}^{\mathsf{T}} + \boldsymbol{\Gamma}\right)^{-1}\!(\boldsymbol{y} - \mathbf{L}\mathbf{m}_*).
+\]</span> This is optimal interpolation, with <span class="math inline">\(\mathbf{K}_{**} \equiv \mathbf{B}\)</span>.</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="assimilating-almost-anything_files/figure-revealjs/gp-prior-posterior-1.png" class="quarto-figure quarto-figure-center" width="1900"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="targeting-a-gp-with-a-diffusion" class="slide level2">
+<h2>Targeting a GP with a Diffusion</h2>
+<p>The marginal <span class="math inline">\(p_t\)</span> stays Gaussian, and we know <span class="math display">\[
+p_t = \mathcal{N}\big(\boldsymbol{b}(t),\, \mathbf{A}(t)\big), \qquad
+\boldsymbol{b}(t) = \alpha(t)\,\mathbf{m}_*, \qquad
+\mathbf{A}(t) = \alpha^2(t)\mathbf{K}_{**} + (1-\alpha^2(t))\mathbf{I}.
+\]</span></p>
+<p>So the score is closed form, and no network is required:</p>
+<p><span class="math display">\[
+\nabla_{\boldsymbol{f}}\log p_t(\boldsymbol{f}_t) = -\mathbf{A}(t)^{-1}\big(\boldsymbol{f}_t - \boldsymbol{b}(t)\big).
+\]</span></p>
+<p>Drop it into the reverse-time SDE and integrate from <span class="math inline">\(t=1\)</span> to <span class="math inline">\(t=0\)</span>:</p>
+<p><span class="math display">\[
+\mathrm{d}\boldsymbol{f}_t = \beta(t)\left[\tfrac{1}{2}\boldsymbol{f}_t - \nabla_{\boldsymbol{f}}\log p_t(\boldsymbol{f}_t)\right]\mathrm{d}t + \sqrt{\beta(t)}\,\mathrm{d}\bar{\boldsymbol{W}}_t.
+\]</span></p>
+<div class="highlight-box">
+<p>A GP/OI is a very boring cat with a score we can write down.</p>
+</div>
+</section>
+<section id="watch-it-happen" class="slide level2">
+<h2>Watch it happen</h2>
+<div style="display:flex; flex-direction:column; align-items:center; gap:0.3em;">
+<video data-autoplay="" loop="" muted="" width="1250" src="images/noise_to_gp.mp4" onclick="this.paused ? this.play() : this.pause();" style="transform: translateZ(0);">
+</video>
+<video data-autoplay="" loop="" muted="" width="1250" src="images/noise_to_gp_conditioned.mp4" onclick="this.paused ? this.play() : this.pause();" style="transform: translateZ(0);">
+</video>
+</div>
+</section>
+<section id="whitening-into-better-coordinates" class="slide level2">
+<h2>Whitening into better coordinates</h2>
+<p><br></p>
+<div style="text-align: center;">
+<p><strong><em>“The most efficient thing for a computer to do is nothing”</em></strong> - Prof.&nbsp;Philipp Hennig</p>
+</div>
+<p><br></p>
+<p>Whiten: <span class="math inline">\(\hat{\boldsymbol{f}}_0 = \mathbf{K}_{**}^{-1/2}(\boldsymbol{f}_0 - \mathbf{m}_*)\)</span>, the dynamics vanish entirely … the linear drift term is <em>zero</em>.</p>
+<div style="display:flex; justify-content:center;">
+<video data-autoplay="" loop="" muted="" width="1650" src="images/whitening_grid.mp4" onclick="this.paused ? this.play() : this.pause();" style="transform: translateZ(0);">
+</video>
+</div>
+</section>
+<section id="your-model-is-already-the-generator" class="slide level2">
+<h2>Your model is already the generator</h2>
+<!-- ::: {.highlight-box}
+**If you can already simulate from $f$, then you already implicitly have $\nabla_{\boldsymbol{f}} \log p_t$.**
+::: -->
+<p><br></p>
+<ul>
+<li>A draw from the process is a deterministic map of simple noise: <span class="math display">\[
+\boldsymbol{f}_0 = T_\vartheta(\boldsymbol{\xi}_0), \qquad
+T_\vartheta : \mathbb{R}^{m} \to \mathbb{R}^{d}, \qquad
+\boldsymbol{\xi}_0 \sim \mathcal{N}(\boldsymbol{0}, \mathbf{I}_m).
+\]</span></li>
+<li>For a Gaussian field, <span class="math inline">\(T_\vartheta\)</span> is the Cholesky factor. For an SDE or an SPDE, <span class="math inline">\(T_\vartheta\)</span> is the integrator and <span class="math inline">\(\boldsymbol{\xi}_0\)</span> are its driving increments.</li>
+<li>Run the diffusion in <span class="math inline">\(\boldsymbol{\xi}\)</span>, where the prior is standard normal and the score is exactly <span class="math inline">\(-\boldsymbol{\xi}_t\)</span>, then push through <span class="math inline">\(T_\vartheta\)</span>.</li>
+<li>Rosenblatt (1952): <em>after discretisation</em>, <em>every</em> process admits such a representation.</li>
+</ul>
+<div class="slide-cite">
+<p>Rosenblatt (1952), <em>Remarks on a multivariate transformation</em>, The Annals of Mathematical Statistics 23(3):470–472.</p>
+</div>
+</section>
+<section id="a-gallery-of-boring-cats" class="slide level2">
+<h2>A gallery of boring cats</h2>
+<p><br></p>
+<p>Every one is <span class="math inline">\(\boldsymbol{f}_0 = T_\vartheta(\boldsymbol{\xi}_0)\)</span> for a tractable generator <span class="math inline">\(T_\vartheta\)</span> and iid-normal latent <span class="math inline">\(\boldsymbol{\xi}_0\)</span>:</p>
+<ul>
+<li><strong>Gaussian and heavy-tailed fields</strong> — the usual spatial priors, plus tails that match precipitation and surge: a Gaussian draw times a scale or mixing variable.</li>
+<li><strong>Categorical fields</strong> — sea ice, land cover, cloud regime: ordered labels read off latent noise (e.g.&nbsp;a Potts model).</li>
+<li><strong>SDEs/SPDEs</strong> — stochastic physics parameterisations, energy-balance and box models: <span class="math inline">\(T_\vartheta\)</span> is the Euler-Maruyama step and <span class="math inline">\(\boldsymbol{\xi}_0\)</span> are its increments.</li>
+<li><strong>“Stochastic” numerical models</strong> — WRF, MOM, ROMS, a Lagrangian particle tracker, …</li>
+</ul>
+<p><br></p>
+</section>
+<section id="where-we-stand" class="slide level2">
+<h2>Where we stand</h2>
+<p><br></p>
+<ul>
+<li>Push <span class="math inline">\(\boldsymbol{\xi}_0 \sim \mathcal{N}(\boldsymbol{0},\mathbf{I})\)</span> through <span class="math inline">\(T_\vartheta\)</span></li>
+<li>This gives marginal samples of nearly any stochastic process. (We could already do this, it’s just simulation.)</li>
+<li>The score of the <strong><em>latent</em></strong> noising process with respect to <span class="math inline">\(\boldsymbol{\xi}_t\)</span> is closed form.</li>
+<li>Thus the boring-cat property survives in <strong><em>latent space</em></strong> for every process in the gallery.</li>
+</ul>
+<p><br></p>
+<ul>
+<li>Now we need a framework for <em>conditioning</em>…</li>
+</ul>
+</section>
+<section id="sneak-peak---physics-as-conditioning-information" class="slide level2">
+<h2>Sneak Peak - Physics as conditioning information</h2>
+<p><span class="math display">\[
+\nabla \log p_t(\boldsymbol{f}_t \mid \mathcal{C}) = \nabla \log p_t(\boldsymbol{f}_t) + \nabla \log p_t(\mathcal{C} \mid \boldsymbol{f}_t).
+\]</span></p>
+<p><br></p>
+<div style="text-align:center; font-size:0.8em; margin-bottom:-0.3em;">
+<p>Optimal interpolation, conditioned on the observations alone</p>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/fig_pendulum_prior.png" class="quarto-figure quarto-figure-center" width="1700"></p>
+</figure>
+</div>
+<div style="text-align:center; font-size:0.8em; margin-bottom:-0.3em;">
+<p>Conditioned on the observations <strong>and</strong> on the non-linear damped pendulum equation</p>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/fig_pendulum_physics.png" class="quarto-figure quarto-figure-center" width="1700"></p>
+</figure>
+</div>
+</section></section>
+<section>
+<section id="grumpy-stochastic-models" class="title-slide slide level1 center" data-background-color="#FFDC00">
+<h1>Grumpy Stochastic Models</h1>
+
+</section>
+<section id="guidance-is-just-bayes" class="slide level2">
+<h2>Guidance is just Bayes</h2>
+<p><br></p>
+<p>We work in latent space. Target the pulled-back posterior: <span class="math display">\[
+\pi(\boldsymbol{\xi}_0 \mid \mathcal{C}) \propto p\big(\mathcal{C} \mid T_\vartheta(\boldsymbol{\xi}_0)\big) \rho(\boldsymbol{\xi}_0).
+\]</span></p>
+<p>Along the latent flow, the score decomposes: <span class="math display">\[
+\nabla_{\boldsymbol{\xi}} \log p_t(\boldsymbol{\xi}_t \mid \mathcal{C}) = \underbrace{\nabla_{\boldsymbol{\xi}} \log p_t(\boldsymbol{\xi}_t)}_{=\,-\boldsymbol{\xi}_t\ \text{(exact)}} + \underbrace{\nabla_{\boldsymbol{\xi}} \log p_t(\mathcal{C} \mid \boldsymbol{\xi}_t)}_{\text{guidance}}.
+\]</span></p>
+<p>Run the same SDE in <span class="math inline">\(\boldsymbol{\xi}\)</span>-space, add the guidance term, then push through <span class="math inline">\(T_\vartheta\)</span>.</p>
+<p><br></p>
+<div class="highlight-box">
+<p>The latent prior is exact at every <span class="math inline">\(t\)</span>. Guidance is the <em>only</em> thing to approximate.</p>
+</div>
+</section>
+<section id="guidance-in-practice" class="slide level2">
+<h2>Guidance, in practice</h2>
+<p>The increment is the pull towards <span class="math inline">\(\mathcal{C}\)</span>, averaged over where the current draw could still end up: <span class="math display">\[
+\nabla_{\boldsymbol{\xi}}\log p_t(\mathcal{C}\mid \boldsymbol{\xi}_t) \approx \alpha(t) \sum_{i=1}^{S} \bar{w}^{(i)}\, \nabla_{\boldsymbol{\xi}}\log p\big(\mathcal{C}\mid T_\vartheta(\boldsymbol{\xi}_0^{(i)})\big), \qquad \bar w^{(i)} \propto p\big(\mathcal{C}\mid T_\vartheta(\boldsymbol{\xi}_0^{(i)})\big).
+\]</span></p>
+<ul>
+<li>For us, guidance is a Monte Carlo average.</li>
+<li>Each term is one gradient of the observation model, pulled back through the model: <span class="math display">\[
+\nabla_{\boldsymbol{\xi}}\log p\big(\mathcal{C}\mid T_\vartheta(\boldsymbol{\xi}_0)\big) = \underbrace{\big[\partial_{\boldsymbol{\xi}} T_\vartheta(\boldsymbol{\xi}_0)\big]^{\!\mathsf T}}_{\text{Jacobian of the integrator}}\, \nabla_{\boldsymbol{f}_0}\log p(\mathcal{C}\mid\boldsymbol{f}_0).
+\]</span></li>
+<li>No training set, no MCMC, no bespoke derivation for each new <span class="math inline">\(\mathcal{C}\)</span>.</li>
+</ul>
+<div class="slide-cite">
+<p>(There are known weight-degeneracy issues in importance sampling that do not appear to matter here, for a handful of esoteric reasons.)</p>
+</div>
+<!-- ## What guidance is acting on
+
+<br>
+
+![](images/cat_vp_reverse.png){fig-align="center" width="2000px"} -->
+</section>
+<section id="the-model-derivative" class="slide level2">
+<h2>The model derivative</h2>
+<p><br></p>
+<ul>
+<li>You need <span class="math inline">\(\partial_{\boldsymbol{\xi}} T_\vartheta\)</span>: the derivative of the integrator with respect to its own random draws. This is the same class of object 4D-Var needs, obtained by autodiff through the solver.</li>
+<li>NeuralGCMs are the existence proof that a serious climate model can be written this way.</li>
+<li>Unlike 4D-Var, the output is draws from the posterior, so you can compute any functional you like and honest uncertainty comes free.</li>
+<li>Unlike 4D-Var and the EnKF, the observation model may be non-Gaussian, bounded, censored, or an inequality.</li>
+<li>Where the code is not differentiable there are some sneaky tricks that we can do.</li>
+</ul>
+<p><br></p>
+<!-- ::: {.highlight-box}
+**Training-free does not mean adjoint-free.**
+::: -->
+</section>
+<section id="a-computational-caveat" class="slide level2">
+<h2>A Computational Caveat</h2>
+<ul>
+<li><strong>We are not cheapening a hard computation.</strong> An expensive model is expensive to condition.</li>
+<li>Cost per posterior draw <span class="math inline">\(\approx\)</span> <span class="math inline">\(\mathcal{O}\)</span>(reverse-SDE steps) forward model integrations.</li>
+<li>Ensemble members can be generated in parallel.</li>
+<li>Where a model is prohibitively expensive, we may still use an emulator, but this is a matter of practicality not feasibility.</li>
+</ul>
+<p><br></p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 32%">
+<col style="width: 25%">
+<col style="width: 32%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Error source</th>
+<th>Image diffusion</th>
+<th>Simulator-based</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Marginal score <span class="math inline">\(\nabla\log p_t\)</span></td>
+<td>uncontrolled</td>
+<td>exact</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Guidance approximation</td>
+<td>uncontrolled</td>
+<td>explicit; <span class="math inline">\(\mathcal{O}(S^{-1})\)</span> bias</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Discretisation</td>
+<td>controllable</td>
+<td>solver order <span class="math inline">\(h^q\)</span>, same bound</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="when-do-neural-networks-still-help" class="slide level2">
+<h2>When do neural networks still help?</h2>
+<p><br></p>
+<ul>
+<li>Our thesis so far: <strong>if you can simulate, the score is free and the network goes away</strong></li>
+<li>This does nothing for computation</li>
+<li>A generative emulator may still be helpful to enable computation</li>
+<li>A NN provides an adjoint. An emulator is differentiable by construction; forty years of Fortran is not.</li>
+<li>A learned emulator <em>might</em> account for model misspecification (e.g.&nbsp;GenCast vs ENS)</li>
+</ul>
+<div class="highlight-box">
+<p>The conditioning mechanism does not care where the score comes from. Closed form from your solver, or learned from data.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/schematic1.svg" class="quarto-figure quarto-figure-center" width="2000"></p>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/schematic2.svg" class="quarto-figure quarto-figure-center" width="2000"></p>
+</figure>
+</div>
+</section>
+<section id="spatial-fields-awkward-observations" class="slide level2">
+<h2>Spatial fields, awkward observations</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/spatial_processes.svg" class="quarto-figure quarto-figure-center" width="1800"></p>
+</figure>
+</div>
+</section>
+<section id="hf-radar-currents-with-known-boundaries" class="slide level2">
+<h2>HF Radar Currents with known Boundaries</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/radar_coastline.svg" class="quarto-figure quarto-figure-center" width="1700"></p>
+</figure>
+</div>
+</section>
+<section id="a-toy-landatmosphere-feedback-model" class="slide level2">
+<h2>A toy land–atmosphere feedback model</h2>
+<p><span class="math display">\[
+\mathrm{d}T = -\kappa(S)\,\bigl(T - T^{*}(S)\bigr)\,\mathrm{d}t + \sigma_T\,\mathrm{d}W_T,
+\qquad
+\mathrm{d}S = 1/C_S \bigl(P(t) - E(T,S)\bigr)\,\mathrm{d}t
+\]</span></p>
+<p><span style="font-size:0.55em; color:#8A8073"><span class="math inline">\(\kappa(S)\)</span> relaxation rate · <span class="math inline">\(T^{*}(S)\)</span> equilibrium temperature under drying · <span class="math inline">\(C_S\)</span> soil water storage capacity · <span class="math inline">\(P(t)\)</span> precipitation · <span class="math inline">\(E(T,S)\)</span> evaporative water loss</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/soil_counterfactual_process_demo.svg" class="quarto-figure quarto-figure-center" width="1500"></p>
+</figure>
+</div>
+</section>
+<section id="a-toy-landatmosphere-feedback-model-1" class="slide level2">
+<h2>A toy land–atmosphere feedback model</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/soil_counterfactual_from_today.svg" class="quarto-figure quarto-figure-center" width="1800"></p>
+</figure>
+</div>
+</section>
+<section id="spatio-temporal-spdes" class="slide level2">
+<h2>Spatio-temporal SPDEs</h2>
+<p><br></p>
+<div style="display:flex; justify-content:center; gap:1.2em;">
+<div style="display:flex; flex-direction:column; align-items:center;">
+<video data-autoplay="" loop="" muted="" width="1020" src="images/advection_diffusion.mp4" onclick="this.paused ? this.play() : this.pause();" style="transform: translateZ(0);">
+</video>
+</div>
+<div style="display:flex; flex-direction:column; align-items:center;">
+<video data-autoplay="" loop="" muted="" width="1020" src="images/allen_cahn.mp4" onclick="this.paused ? this.play() : this.pause();" style="transform: translateZ(0);">
+</video>
+</div>
+</div>
+</section>
+<section id="ssh-from-altimetry-data" class="slide level2">
+<h2>SSH from Altimetry “Data”</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/altimeter_inversion.svg" class="quarto-figure quarto-figure-center" style="margin-top: -0.7em;" width="2200"></p>
+</figure>
+</div>
+</section>
+<section id="methane-flux-inversion" class="slide level2">
+<h2>Methane Flux Inversion</h2>
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/methane4.jpg" class="quarto-figure quarto-figure-center" style="margin-top: 0.5em;" width="2000"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/methane3.jpg" class="quarto-figure quarto-figure-center" style="margin-top: 0em;" width="1300"></p>
+</figure>
+</div>
+</section>
+<section id="conditioning-on-natural-language" class="slide level2">
+<h2>Conditioning on Natural Language</h2>
+<p><br> <br></p>
+<div style="display:flex; justify-content:center; align-items:flex-start; gap:40px; margin-top:1.5em;">
+<div style="display:flex; flex-direction:column; align-items:center; gap:0.5em;">
+<div style="display:flex; align-items:flex-end;">
+<img src="images/fig_llm_bankruptcy_prior.png" style="height:600px; width:auto; margin:0; border:none; box-shadow:none;"><img src="images/fig_llm_bankruptcy_conditioned.png" style="height:600px; width:auto; margin:0; border:none; box-shadow:none;">
+</div>
+<div style="font-size:0.5em; font-style:italic; text-align:center; max-width:800px; line-height:1.25;">
+“A small UK company’s daily stock price in GBP over 50 trading days. On day 30 the company enters compulsory liquidation and is permanently delisted from the London Stock Exchange.”
+</div>
+</div>
+<div style="display:flex; flex-direction:column; align-items:center; gap:0.5em;">
+<div style="display:flex; align-items:flex-end;">
+<img src="images/fig_llm_stable_prior.png" style="height:600px; width:auto; margin:0; border:none; box-shadow:none;"><img src="images/fig_llm_stable_conditioned.png" style="height:600px; width:auto; margin:0; border:none; box-shadow:none;">
+</div>
+<div style="font-size:0.5em; font-style:italic; text-align:center; max-width:800px; line-height:1.25;">
+“A small UK company’s daily stock price in GBP over 50 trading days. The company has no notable news during the period, but performs well. Ending with a value over 5 GBP per share.”
+</div>
+</div>
+<div style="display:flex; flex-direction:column; align-items:center; gap:0.5em;">
+<div style="display:flex; align-items:flex-end;">
+<img src="images/fig_llm_sandiego_prior.png" style="height:600px; width:auto; margin:0; border:none; box-shadow:none;"><img src="images/fig_llm_sandiego_conditioned.png" style="height:600px; width:auto; margin:0; border:none; box-shadow:none;">
+</div>
+<div style="font-size:0.5em; font-style:italic; text-align:center; max-width:800px; line-height:1.25;">
+“Monthly average precipitation in San Diego in inches over 50 months, starting in January.”
+</div>
+</div>
+</div>
+</section>
+<section id="whats-here-and-whats-next" class="slide level2">
+<h2>What’s here and what’s next</h2>
+<p><br></p>
+<p>We’ve done a lot of theory this year:</p>
+<div style="font-size: 0.8em;">
+<ul>
+<li><strong>Moss<span class="math inline">\(^*\)</span>, Astfalck<span class="math inline">\(^*\)</span>, …, Zammit-Mangion</strong>, <em>Conditioning Gaussian Processes on Almost Anything</em>, arXiv:2605.21041</li>
+<li><strong>Sharrock, Astfalck, Moss</strong>, <em>A General Framework for Conditioning Stochastic Processes</em>, arXiv:2607.12922</li>
+<li><strong>Zammit-Mangion, …, Astfalck</strong>, <em>Spatial Prediction with Guided Diffusion</em>, coming soon…</li>
+<li><strong>Cowperthwaite, Astfalck, Sharrock, Moss</strong>, <em>Scalable Gaussian Process Flows</em>, coming soon…</li>
+<li><strong>Riffel, Astfalck, Moss, Zammit-Mangion</strong>, <em>Inference for Non-Ignorable Missingness with Diffusion Models</em>, coming soon…</li>
+<li><strong>Astfalck, …, Zammit-Mangion</strong>, <em>Posterior Sampling by Likelihood-guided Diffusion of the Prior</em>, coming soon…</li>
+</ul>
+</div>
+<p><br></p>
+<p><strong>Now, can we actually DO anything?!</strong></p>
+</section>
+<section class="slide level2">
+
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/champion.png" class="quarto-figure quarto-figure-center" width="1800"></p>
+</figure>
+</div>
+</section>
+<section id="questions" class="slide level2" style="padding-top: 12em;">
+<h2>Questions?</h2>
+<div style="color: rgba(0,0,0,0.5); font-size: 0.75em; margin-top: 1em;">
+<p>Slides and code: <code>astfalckl.github.io/presentations</code></p>
+<p>STREAM: <code>unsw.edu.au/science/our-schools/maths/our-research/stream</code></p>
+<p><code>l.astfalck@unsw.edu.au</code></p>
+</div>
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+<p>Lachlan Astfalck | UNSW Spatio-Temporal Research for Environmental Analysis and Modelling</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="assimilating-almost-anything_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="assimilating-almost-anything_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="assimilating-almost-anything_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="assimilating-almost-anything_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="assimilating-almost-anything_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="assimilating-almost-anything_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="assimilating-almost-anything_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="assimilating-almost-anything_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="assimilating-almost-anything_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="assimilating-almost-anything_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: false,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 2560,
+
+        height: 1440,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'libs/mathjax/tex-chtml-full.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <style>
+    /* The overlay is fixed to the body, so it sits OUTSIDE the transform Reveal
+       applies to .slides — a length in px would stay put while the slide itself
+       grew or shrank with the viewport. Every length below is therefore written in
+       the units Reveal builds its scale from,
+
+         scale = min(0.9 * viewportW / 2560, 0.9 * viewportH / 1440),
+
+       i.e. Npx becomes min(N*0.0352vw, N*0.0625vh). The logos then track the slide
+       identically on any display. Slide dimensions come from _extension.yml
+       (2560x1440) and the margin from the Reveal config (0.1). */
+    #slide-logos {
+      position: fixed;
+      top: min(0.492vw, 0.875vh);
+      right: min(0.563vw, 1vh);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: min(0.960vw, 1.706vh);
+      pointer-events: none;
+    }
+    #slide-logos img {
+      height: min(5.211vw, 9.263vh);
+      opacity: 0.85;
+    }
+    /* Two UNSW marks ship in the markup and CSS picks one — src can't be swapped by
+       a stylesheet. Content slides get the crest alone; the title slide gets the
+       landscape lock-up with the wordmark. */
+    #slide-logos .unsw-landscape {
+      display: none;
+    }
+    body.title-slide-active #slide-logos .unsw-crest,
+    body:has(#title-slide.present) #slide-logos .unsw-crest {
+      display: none;
+    }
+    body.title-slide-active #slide-logos .unsw-landscape,
+    body:has(#title-slide.present) #slide-logos .unsw-landscape {
+      display: inline;
+    }
+    /* Title slide: move to top-left and scale up */
+    body.title-slide-active #slide-logos,
+    body:has(#title-slide.present) #slide-logos {
+      top: min(1.195vw, 2.125vh);
+      bottom: auto;
+      left: min(1.617vw, 2.875vh);
+      right: auto;
+      gap: min(1.160vw, 2.063vh);
+    }
+    body.title-slide-active #slide-logos img,
+    body:has(#title-slide.present) #slide-logos img {
+      height: min(6.117vw, 10.875vh);
+      opacity: 1;
+    }
+    /* Section (h1) slides: no logos at all */
+    body.section-slide-active #slide-logos,
+    body:has(.reveal section.slide.level1.present) #slide-logos {
+      display: none;
+    }
+    </style>
+    <div id="slide-logos">
+      <img class="unsw-crest" src="logos/logo_only.png" alt="UNSW Sydney">
+      <img class="unsw-landscape" src="logos/2.%20Sydney%20Landscape.png" alt="UNSW Sydney">
+      <img src="stream_logo_notext.png" alt="STREAM">
+    </div>
+    <script>
+    (function () {
+      function setTitleSlideState(event) {
+        var currentSlide = event && event.currentSlide
+          ? event.currentSlide
+          : document.querySelector(".reveal section.present");
+        document.body.classList.toggle(
+          "title-slide-active",
+          Boolean(currentSlide && currentSlide.id === "title-slide")
+        );
+        document.body.classList.toggle(
+          "section-slide-active",
+          Boolean(currentSlide &&
+            currentSlide.id !== "title-slide" &&
+            currentSlide.classList.contains("level1"))
+        );
+      }
+
+      function attachRevealListener() {
+        setTitleSlideState();
+        if (!window.Reveal || typeof window.Reveal.on !== "function") {
+          return;
+        }
+        if (document.body.dataset.titleSlideListener === "true") {
+          return;
+        }
+        window.Reveal.on("ready", setTitleSlideState);
+        window.Reveal.on("slidechanged", setTitleSlideState);
+        document.body.dataset.titleSlideListener = "true";
+      }
+
+      document.addEventListener("DOMContentLoaded", attachRevealListener);
+      window.addEventListener("load", attachRevealListener);
+      window.setTimeout(attachRevealListener, 0);
+      window.setTimeout(attachRevealListener, 250);
+
+    })();
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>

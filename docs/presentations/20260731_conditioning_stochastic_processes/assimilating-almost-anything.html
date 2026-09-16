@@ -165,6 +165,17 @@
     max-width: 24em;
     margin: 0.3em auto 0 auto;
   }
+  /* Caption + figure that should read as one block: kill the reveal
+     block margins so the pieces sit against each other. */
+  .reveal .tight-stack p,
+  .reveal .tight-stack figure,
+  .reveal .tight-stack img {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .reveal .tight-stack > :not(:first-child) {
+    margin-top: 0.2em;
+  }
   /* The family-tree table wants to be readable, not loud. */
   .reveal .family-tree table {
     font-size: 0.72em;
@@ -213,7 +224,6 @@ Lachlan Astfalck
 </ul></li>
 <li><strong>Working assumption</strong>: running the unconditional model forward is easy, steering/conditioning is hard.</li>
 </ul>
-<p><br></p>
 <div class="highlight-box">
 <p><strong>We are targeting the quantity <span class="math inline">\(p(f \mid \mathcal{C})\)</span>.</strong></p>
 </div>
@@ -305,7 +315,7 @@ Lachlan Astfalck
 <p><br> <br></p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/cat_noised_annotated_ccrc.png" class="quarto-figure quarto-figure-center" width="2000"></p>
+<p><img data-src="images/cat_noised_annotated.png" class="quarto-figure quarto-figure-center" width="2000"></p>
 </figure>
 </div>
 </section>
@@ -334,7 +344,7 @@ Lachlan Astfalck
 <p><br></p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/cat_restored_annotated_ccrc.png" class="quarto-figure quarto-figure-center" width="2000"></p>
+<p><img data-src="images/cat_restored_annotated.png" class="quarto-figure quarto-figure-center" width="2000"></p>
 </figure>
 </div>
 </section>
@@ -388,8 +398,8 @@ Lachlan Astfalck
 </div>
 </section></section>
 <section>
-<section id="your-model-is-a-boring-cat" class="title-slide slide level1 center" data-background-color="#FFDC00">
-<h1>Your Model Is A Boring Cat</h1>
+<section id="stoch.-models-are-boring-cats" class="title-slide slide level1 center" data-background-color="#FFDC00">
+<h1>Stoch. Models Are Boring Cats</h1>
 
 </section>
 <section id="gaussian-processes-kriging-oi" class="slide level2">
@@ -499,11 +509,13 @@ T_\vartheta : \mathbb{R}^{m} \to \mathbb{R}^{d}, \qquad
 </section>
 <section id="sneak-peak---physics-as-conditioning-information" class="slide level2">
 <h2>Sneak Peak - Physics as conditioning information</h2>
+<p><br></p>
 <p><span class="math display">\[
 \nabla \log p_t(\boldsymbol{f}_t \mid \mathcal{C}) = \nabla \log p_t(\boldsymbol{f}_t) + \nabla \log p_t(\mathcal{C} \mid \boldsymbol{f}_t).
 \]</span></p>
 <p><br></p>
-<div style="text-align:center; font-size:0.8em; margin-bottom:-0.3em;">
+<div class="tight-stack">
+<div style="text-align:center; font-size:0.8em;margin-bottom:0.6em;">
 <p>Optimal interpolation, conditioned on the observations alone</p>
 </div>
 <div class="quarto-figure quarto-figure-center">
@@ -511,13 +523,14 @@ T_\vartheta : \mathbb{R}^{m} \to \mathbb{R}^{d}, \qquad
 <p><img data-src="images/fig_pendulum_prior.png" class="quarto-figure quarto-figure-center" width="1700"></p>
 </figure>
 </div>
-<div style="text-align:center; font-size:0.8em; margin-bottom:-0.3em;">
+<div style="text-align:center; font-size:0.8em;margin-bottom:0.6em;">
 <p>Conditioned on the observations <strong>and</strong> on the non-linear damped pendulum equation</p>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/fig_pendulum_physics.png" class="quarto-figure quarto-figure-center" width="1700"></p>
 </figure>
+</div>
 </div>
 </section></section>
 <section>
@@ -677,11 +690,14 @@ T_\vartheta : \mathbb{R}^{m} \to \mathbb{R}^{d}, \qquad
 \qquad
 \mathrm{d}S = 1/C_S \bigl(P(t) - E(T,S)\bigr)\,\mathrm{d}t
 \]</span></p>
-<p><span style="font-size:0.55em; color:#8A8073"><span class="math inline">\(\kappa(S)\)</span> relaxation rate · <span class="math inline">\(T^{*}(S)\)</span> equilibrium temperature under drying · <span class="math inline">\(C_S\)</span> soil water storage capacity · <span class="math inline">\(P(t)\)</span> precipitation · <span class="math inline">\(E(T,S)\)</span> evaporative water loss</span></p>
+<p><span style="font-size:0.55em; color:#8A8073"><span class="math inline">\(\kappa(S)\)</span> relaxation rate · <span class="math inline">\(T^{*}(S)\)</span> equilibrium temperature · <span class="math inline">\(C_S\)</span> soil water storage capacity · <span class="math inline">\(P(t)\)</span> precipitation · <span class="math inline">\(E(T,S)\)</span> evaporative water loss</span></p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/soil_counterfactual_process_demo.svg" class="quarto-figure quarto-figure-center" width="1500"></p>
+<p><img data-src="images/soil_counterfactual_process_demo.svg" class="quarto-figure quarto-figure-center" width="1300"></p>
 </figure>
+</div>
+<div class="slide-cite">
+<p>An insultingly simplified version of Brubaker &amp; Entekhabi (1996).</p>
 </div>
 </section>
 <section id="a-toy-landatmosphere-feedback-model-1" class="slide level2">
@@ -717,16 +733,27 @@ T_\vartheta : \mathbb{R}^{m} \to \mathbb{R}^{d}, \qquad
 <section id="methane-flux-inversion" class="slide level2">
 <h2>Methane Flux Inversion</h2>
 <p><br></p>
+<div class="tight-stack">
+<div style="text-align:center; font-size:0.8em;margin-bottom:0.6em;">
+<p>NN + Diffusion based inversion of methane flux</p>
+</div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/methane4.jpg" class="quarto-figure quarto-figure-center" style="margin-top: 0.5em;" width="2000"></p>
 </figure>
+</div>
+<p><br> <br></p>
+<div style="text-align:center; font-size:0.8em;margin-bottom:0.6em;">
+<p><br> Computational scaling vs true-model inversion</p>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/methane3.jpg" class="quarto-figure quarto-figure-center" style="margin-top: 0em;" width="1300"></p>
 </figure>
 </div>
+</div>
+<!-- <br> -->
+<!--  -->
 </section>
 <section id="conditioning-on-natural-language" class="slide level2">
 <h2>Conditioning on Natural Language</h2>
